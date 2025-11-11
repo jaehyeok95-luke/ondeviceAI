@@ -1,0 +1,23 @@
+# STM32CubeIDE / FreeRTOS
+Debug/
+Release/
+build/
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.srec
+.metadata/
+.settings/
+*.launch
+*.log
+*.swo
+*.svd
+*.swp
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
