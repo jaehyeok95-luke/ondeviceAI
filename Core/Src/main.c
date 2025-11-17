@@ -58,13 +58,91 @@ enum{
 volatile uint8_t currFloor = 0b001;			// 현재 층수
 volatile uint8_t targetFloor = 0b000;		// 예약 층수
 volatile uint32_t tickCount;				// 엘리베이터 도착한 후 다음 동작 대기시간 3초
-volatile uint8_t flag;
+volatile uint8_t flag, flag1, flag2, flag3;
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+
+void update_targetFloor()
+{
+	if(flag1)
+	{
+		if(led1 || firstUpLed)
+		{
+			if(led1)
+			{
+				led1 = !led1;
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, led1);  // LED 1 OFF
+				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
+			}
+			if(firstUpLed)
+			{
+				firstUpLed = !firstUpLed;
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, firstUpLed);
+				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
+			}
+
+			if(!led1 && !firstUpLed)
+				targetFloor &= ~(1 << FIRSTFLOOR);		  // 1층 예약 해제
+		}
+		flag1 = 0;
+	}
+
+	else if(flag2)
+	{
+		if(led2 || secondUpLed || secondDnLed)
+		{
+			if(led2)
+			{
+				led2 = !led2;
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, led2);  // LED 2 OFF
+				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
+			}
+			if((secondUpLed) && (elevatorCurr != DOWN))
+			{
+				secondUpLed = !secondUpLed;
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, secondUpLed);
+				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
+			}
+			if((secondDnLed) && (elevatorCurr != UP))
+			{
+				secondDnLed = !secondDnLed;
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, secondDnLed);
+				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
+			}
+
+			if(!led2 && !secondUpLed && !secondDnLed)
+				targetFloor &= ~(1 << SECONDFLOOR);		     // 2층 예약 해제
+		}
+		flag2 = 0;
+	}
+
+	else if(flag3)
+	{
+		if(led3 || thirdDnLed)
+		{
+			if(led3)
+			{
+				led3 = !led3;
+				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, led3);  // LED 3 OFF
+				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
+			}
+			if(thirdDnLed)
+			{
+				thirdDnLed = !thirdDnLed;
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, thirdDnLed);
+				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
+			}
+
+			if(!led3 && !thirdDnLed)
+				targetFloor &= ~(1 << THIRDFLOOR);		  	 // 3층 예약 해제
+		}
+		flag3 = 0;
+	}
+}
 
 // 포토 인터럽트 함수 : Rising Edge trigger. 엘리베이터가 해당 층 도착 시 버튼 LED 를 끄게 동작.
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
@@ -76,78 +154,19 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		case GPIO_PIN_8:  // 1층 도착 시 1층 버튼 LED OFF
 			currFloor = 0b001;			// 현재 층 1층으로 갱신
 			FND_WriteDigit(1);			// 1층 표시
-
-			if(led1 || firstUpLed)
-			{
-				if(led1)
-				{
-					led1 = !led1;
-					HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, led1);  // LED 1 OFF
-				}
-				if(firstUpLed)
-				{
-					firstUpLed = !firstUpLed;
-					HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, firstUpLed);
-				}
-
-				if(!led1 && !firstUpLed)
-					targetFloor &= ~(1 << FIRSTFLOOR);		  // 1층 예약 해제
-
-				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
-			}
+			flag1 = 1;
 		break;
 
 		case GPIO_PIN_6:  // 2층 도착 시 2층 버튼 LED OFF
 			currFloor = 0b010;
 			FND_WriteDigit(2);			// 2층 표시
-
-			if(led2 || secondUpLed || secondDnLed)
-			{
-				if(led2)
-				{
-					led2 = !led2;
-					HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, led2);  // LED 2 OFF
-				}
-				if((secondUpLed) && (elevatorCurr == UP))
-				{
-					secondUpLed = !secondUpLed;
-					HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, secondUpLed);
-				}
-				if((secondDnLed) && (elevatorCurr == DOWN))
-				{
-					secondDnLed = !secondDnLed;
-					HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, secondDnLed);
-				}
-
-				if(!led2 && !secondUpLed && !secondDnLed)
-					targetFloor &= ~(1 << SECONDFLOOR);		     // 2층 예약 해제
-
-				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
-			}
+			flag2 = 1;
 		break;
 
 		case GPIO_PIN_5:  // 3층 도착 시 3층 버튼 LED OFF
 			currFloor = 0b100;
 			FND_WriteDigit(3);		// 3층 표시
-
-			if(led3 || thirdDnLed)
-			{
-				if(led3)
-				{
-					led3 = !led3;
-					HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, led3);  // LED 3 OFF
-				}
-				if(thirdDnLed)
-				{
-					thirdDnLed = !thirdDnLed;
-					HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, thirdDnLed);
-				}
-
-				if(!led3 && !thirdDnLed)
-					targetFloor &= ~(1 << THIRDFLOOR);		  	 // 3층 예약 해제
-
-				HAL_TIM_Base_Start_IT(&htim10);				// 대기 3초
-			}
+			flag3 = 1;
 		break;
 
 		default:
@@ -161,14 +180,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	if(htim -> Instance == TIM11)
 	{
 		stepMotor(motorState);
+
 		if(motorState != 7)
-		{
 			motorState++;
-		}
 		else
-		{
 			motorState = 0;
-		}
 	}
 
 	// 원하는 층 도착 후 문 여닫는 동작 대기 3초
@@ -255,6 +271,8 @@ int main(void)
 					  elevatorCurr = DOWN;
 				  else if(targetFloor & ~((currFloor << 1) - 1))	// 위층 예약 있나?
 					  elevatorCurr = UP;
+				  else
+					  elevatorCurr = STOP;
 			  }
 			  else if(elevatorPrev == UP)
 			  {
@@ -262,6 +280,8 @@ int main(void)
 					  elevatorCurr = UP;
 				  else if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
 					  elevatorCurr = DOWN;
+				  else
+					  elevatorCurr = STOP;
 			  }
 			  else	// elevatorPrev == STOP
 			  {
@@ -269,6 +289,8 @@ int main(void)
 					  elevatorCurr = UP;
 				  else if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
 					  elevatorCurr = DOWN;
+				  else
+					  elevatorCurr = STOP;
 			  }
 		  }
 	  }
@@ -282,6 +304,8 @@ int main(void)
 			  __HAL_TIM_SET_COUNTER(&htim11, 0);
 		  }
 	  }
+
+	  update_targetFloor();
 
     /* USER CODE END WHILE */
 
