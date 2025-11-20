@@ -58,13 +58,69 @@ enum{
 volatile uint8_t currFloor = 0b001;			// 현재 층수
 volatile uint8_t targetFloor = 0b000;		// 예약 층수
 volatile uint32_t tickCount;				// 엘리베이터 도착한 후 다음 동작 대기시간 3초
-volatile uint8_t flag, flag1, flag2, flag3;
+volatile uint8_t movflag, flag1, flag2, flag3;
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+
+void elevatorControl()
+{
+	if((movflag == 1) || (elevatorCurr == STOP))		// 포토인터럽트 발생 시 또는 예약층이 없는 경우 실행
+	{
+		elevatorPrev = elevatorCurr;
+		movflag = 0;										// 플래그 초기화 -> 다음 인터럽트 대기
+
+		if(!targetFloor)							// 예약층 없으면 정지
+		{
+			elevatorCurr = STOP;
+			HAL_TIM_Base_Stop_IT(&htim11);
+			__HAL_TIM_SET_COUNTER(&htim11,0);
+		}
+		else											// 예약층 있으면 동작 제어
+		{
+			if(elevatorPrev == DOWN) // 이전에 하강중이었나?
+			{
+				if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
+					elevatorCurr = DOWN;
+				else if(targetFloor & ~((currFloor << 1) - 1))	// 위층 예약 있나?
+					elevatorCurr = UP;
+				else
+					elevatorCurr = STOP;
+			}
+			else if(elevatorPrev == UP)
+			{
+				if(targetFloor & ~((currFloor << 1) - 1))	// 위층 예약 있나?
+					elevatorCurr = UP;
+				else if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
+					elevatorCurr = DOWN;
+				else
+					elevatorCurr = STOP;
+			}
+			else	// elevatorPrev == STOP
+			{
+				if(targetFloor & ~((currFloor << 1) - 1))	// 위층 예약 있나?
+					elevatorCurr = UP;
+				else if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
+					elevatorCurr = DOWN;
+				else
+					elevatorCurr = STOP;
+			}
+		}
+	}
+	else	// 엘리베이터 다음동작 수행
+	{
+		if(!tickCount)		// 엘리베이터 문이 열려있지 않으면
+			HAL_TIM_Base_Start_IT(&htim11);
+		else		// 엘베 문이 열려있으면 엘베 대기.
+		{
+			HAL_TIM_Base_Stop_IT(&htim11);
+			__HAL_TIM_SET_COUNTER(&htim11, 0);
+		}
+	}
+}
 
 void update_targetFloor()
 {
@@ -147,7 +203,7 @@ void update_targetFloor()
 // 포토 인터럽트 함수 : Rising Edge trigger. 엘리베이터가 해당 층 도착 시 버튼 LED 를 끄게 동작.
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	flag = 1;
+	movflag = 1;
 
 	switch (GPIO_Pin)
 	{
@@ -250,61 +306,7 @@ int main(void)
 	  // 층수 버튼을 눌러 LED 동작하는 함수
 	  buttonState(currFloor, &targetFloor, &elevatorCurr);
 	  outerButtonState(currFloor, &targetFloor, &elevatorCurr);
-
-
-	  if((flag == 1) || (elevatorCurr == STOP))		// 포토인터럽트 발생 시 또는 예약층이 없는 경우 실행
-	  {
-		  elevatorPrev = elevatorCurr;
-		  flag = 0;										// 플래그 초기화 -> 다음 인터럽트 대기
-
-		  if(!targetFloor)							// 예약층 없으면 정지
-		  {
-			  elevatorCurr = STOP;
-			  HAL_TIM_Base_Stop_IT(&htim11);
-			  __HAL_TIM_SET_COUNTER(&htim11,0);
-		  }
-		  else											// 예약층 있으면 동작 제어
-		  {
-			  if(elevatorPrev == DOWN) // 이전에 하강중이었나?
-			  {
-				  if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
-					  elevatorCurr = DOWN;
-				  else if(targetFloor & ~((currFloor << 1) - 1))	// 위층 예약 있나?
-					  elevatorCurr = UP;
-				  else
-					  elevatorCurr = STOP;
-			  }
-			  else if(elevatorPrev == UP)
-			  {
-				  if(targetFloor & ~((currFloor << 1) - 1))	// 위층 예약 있나?
-					  elevatorCurr = UP;
-				  else if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
-					  elevatorCurr = DOWN;
-				  else
-					  elevatorCurr = STOP;
-			  }
-			  else	// elevatorPrev == STOP
-			  {
-				  if(targetFloor & ~((currFloor << 1) - 1))	// 위층 예약 있나?
-					  elevatorCurr = UP;
-				  else if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
-					  elevatorCurr = DOWN;
-				  else
-					  elevatorCurr = STOP;
-			  }
-		  }
-	  }
-	  else	// 엘리베이터 다음동작 수행
-	  {
-		  if(!tickCount)		// 엘리베이터 문이 열려있지 않으면
-			  HAL_TIM_Base_Start_IT(&htim11);
-		  else		// 엘베 문이 열려있으면 엘베 대기.
-		  {
-			  HAL_TIM_Base_Stop_IT(&htim11);
-			  __HAL_TIM_SET_COUNTER(&htim11, 0);
-		  }
-	  }
-
+	  elevatorControl();
 	  update_targetFloor();
 
     /* USER CODE END WHILE */
