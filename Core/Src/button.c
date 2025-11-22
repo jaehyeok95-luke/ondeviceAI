@@ -41,7 +41,7 @@ void buttonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevatorCurr)
 		if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4) == 0)
 		{
 			// 1층 버튼 LED ON (or 눌러져있었는데 다시 누르면 OFF)
-			if((currFloor == 0b001) && !*elevatorCurr) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
+			if((currFloor == 0b001) && (*elevatorCurr == STOP)) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
 			{
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, 0);
 			}
@@ -63,7 +63,7 @@ void buttonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevatorCurr)
 		HAL_Delay(20);
 		if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5) == 0)
 		{
-			if((currFloor == 0b010) && !*elevatorCurr) // 현재 2층에 정지해있으면 2층 버튼불 동작 x
+			if((currFloor == 0b010) && (*elevatorCurr == STOP)) // 현재 2층에 정지해있으면 2층 버튼불 동작 x
 			{
 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, 0);
 			}
@@ -85,7 +85,7 @@ void buttonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevatorCurr)
 		HAL_Delay(20);
 		if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_3) == 0)
 		{
-			if((currFloor == 0b100) && !*elevatorCurr) // 현재 3층에 정지해있으면 3층 버튼 불 동작 x
+			if((currFloor == 0b100) && (*elevatorCurr == STOP)) // 현재 3층에 정지해있으면 3층 버튼 불 동작 x
 			{
 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, 0);
 			}
@@ -108,7 +108,7 @@ void buttonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevatorCurr)
 	prevState3 = currState3;
 }
 
-void outerButtonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevatorCurr)
+void outerButtonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevatorCurr, uint8_t *elevatorPrev)
 {
 	// 버튼 누르는 동작 감지
 	firstUpCurr = (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2) == 0) ? PUSHED : RELEASED;
@@ -123,7 +123,7 @@ void outerButtonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevator
 		if(HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2) == 0)
 		{
 			// 1층 버튼 LED ON (or 눌러져있었는데 다시 누르면 OFF)
-			if((currFloor == 0b001) && !*elevatorCurr) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
+			if((currFloor == 0b001) && (*elevatorCurr == STOP)) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
 			{
 				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, 0);
 			}
@@ -146,7 +146,7 @@ void outerButtonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevator
 		if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_12) == 0)
 		{
 			// 1층 버튼 LED ON (or 눌러져있었는데 다시 누르면 OFF)
-			if((currFloor == 0b010) && !*elevatorCurr) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
+			if((currFloor == 0b010) && (*elevatorCurr == STOP) && (*elevatorPrev == DOWN)) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
 			{
 				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 0);
 			}
@@ -169,7 +169,7 @@ void outerButtonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevator
 		if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_11) == 0)
 		{
 			// 1층 버튼 LED ON (or 눌러져있었는데 다시 누르면 OFF)
-			if((currFloor == 0b010) && !*elevatorCurr) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
+			if((currFloor == 0b010) && (*elevatorCurr == STOP) && (*elevatorPrev == UP)) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
 			{
 				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, 0);
 			}
@@ -191,7 +191,7 @@ void outerButtonState(uint8_t currFloor, uint8_t *targetFloor, uint8_t *elevator
 		if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_10) == 0)
 		{
 			// 1층 버튼 LED ON (or 눌러져있었는데 다시 누르면 OFF)
-			if((currFloor == 0b100) && !*elevatorCurr) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
+			if((currFloor == 0b100) && (*elevatorCurr == STOP)) // 현재 1층에 정지해 있으면 1층 버튼 불 동작 X
 			{
 				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, 0);
 			}

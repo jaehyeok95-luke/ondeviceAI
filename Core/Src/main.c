@@ -70,12 +70,16 @@ void elevatorControl()
 {
 	if((movflag == 1) || (elevatorCurr == STOP))		// 포토인터럽트 발생 시 또는 예약층이 없는 경우 실행
 	{
-		elevatorPrev = elevatorCurr;
-		movflag = 0;										// 플래그 초기화 -> 다음 인터럽트 대기
+		if(movflag == 1)
+		{
+			elevatorPrev = elevatorCurr;
+			movflag = 0;										// 플래그 초기화 -> 다음 인터럽트 대기
+		}
 
 		if(!targetFloor)							// 예약층 없으면 정지
 		{
 			elevatorCurr = STOP;
+			elevatorPrev = STOP;
 			HAL_TIM_Base_Stop_IT(&htim11);
 			__HAL_TIM_SET_COUNTER(&htim11,0);
 		}
@@ -88,7 +92,10 @@ void elevatorControl()
 				else if(targetFloor & ~((currFloor << 1) - 1))	// 위층 예약 있나?
 					elevatorCurr = UP;
 				else
+				{
 					elevatorCurr = STOP;
+					elevatorPrev = STOP;
+				}
 			}
 			else if(elevatorPrev == UP)
 			{
@@ -97,7 +104,10 @@ void elevatorControl()
 				else if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
 					elevatorCurr = DOWN;
 				else
+				{
 					elevatorCurr = STOP;
+					elevatorPrev = STOP;
+				}
 			}
 			else	// elevatorPrev == STOP
 			{
@@ -105,8 +115,6 @@ void elevatorControl()
 					elevatorCurr = UP;
 				else if(targetFloor & (currFloor - 1))	// 아래층 예약 있나?
 					elevatorCurr = DOWN;
-				else
-					elevatorCurr = STOP;
 			}
 		}
 	}
@@ -246,6 +254,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	// 원하는 층 도착 후 문 여닫는 동작 대기 3초
 	if(htim -> Instance == TIM10)
 	{
+		elevatorCurr = STOP;
 		tickCount++;
 		if(tickCount >= 3000)
 		{
@@ -271,7 +280,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -305,7 +313,7 @@ int main(void)
   {
 	  // 층수 버튼을 눌러 LED 동작하는 함수
 	  buttonState(currFloor, &targetFloor, &elevatorCurr);
-	  outerButtonState(currFloor, &targetFloor, &elevatorCurr);
+	  outerButtonState(currFloor, &targetFloor, &elevatorCurr, &elevatorPrev);
 	  elevatorControl();
 	  update_targetFloor();
 
