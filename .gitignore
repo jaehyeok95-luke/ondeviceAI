@@ -1,0 +1,19 @@
+# PyCharm / Python
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Data / models
+*.npy
+*.h5
+*.ckpt
+*.tfrecord
+logs/
