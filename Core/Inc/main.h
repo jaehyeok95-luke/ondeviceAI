@@ -62,10 +62,9 @@ void HCSR04_TRIGGER(uint8_t direction);
 
 /* USER CODE BEGIN Private defines */
 
-extern uint8_t distance1;
-extern uint8_t distance2;
-extern uint8_t distance3;
-
+#define I2C_FRAME_LEN 6
+#define FRAME_W 	640
+#define CX_CENTER	(FRAME_W/2)
 
 /* USER CODE END Private defines */
 

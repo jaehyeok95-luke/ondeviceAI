@@ -29,7 +29,6 @@
 #include "string.h"
 #include "stdio.h"
 #include "delay_us.h"
-#include "I2C_LCD.h"
 #include "ultrasonic.h"
 
 /* USER CODE END Includes */
@@ -42,6 +41,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -53,31 +53,24 @@
 
 /* USER CODE BEGIN PV */
 
-// slave 통신용 버퍼
-uint8_t rxData;
+
+volatile uint32_t lastI2cErr = 0;
+volatile uint8_t i2cRestartReq = 0;
+
 
 // ultrasonic
-// 우측
+// 정면
 uint16_t IC_Value1 = 0;
 uint16_t IC_Value2 = 0;
-uint16_t echoTime1 = 0;
-uint8_t captureFlag1 = 0;
-uint8_t distance1 = 0;
+uint16_t echoTime = 0;
+uint8_t captureFlag = 0;
+uint8_t distance = 0;
 
-// 정면
-uint16_t IC_Value3 = 0;
-uint16_t IC_Value4 = 0;
-uint16_t echoTime2 = 0;
-uint8_t captureFlag2 = 0;
-uint8_t distance2 = 0;
+uint8_t i2cRxData[32];
 
-// 좌측
-uint16_t IC_Value5 = 0;
-uint16_t IC_Value6 = 0;
-uint16_t echoTime3 = 0;
-uint8_t captureFlag3 = 0;
-uint8_t distance3 = 0;
-
+volatile uint16_t g_cx = CX_CENTER;
+volatile int16_t  g_xdiff = 0;
+volatile uint8_t  g_frame_ready = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -85,20 +78,43 @@ void SystemClock_Config(void);
 void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 
+void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c)
+{
+  if (hi2c->Instance != I2C1) return;
+
+  lastI2cErr = HAL_I2C_GetError(hi2c);
+  i2cRestartReq = 1;  // RTOS task에서 복구
+}
+
+
+//void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
+//{
+//	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+//	HAL_I2C_Slave_Receive_IT(&hi2c1, (uint8_t *)i2cRxData, 6);
+//}
+
+void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
+{
+  if (hi2c->Instance != I2C1) return;
+
+  // frame check
+  if (i2cRxData[0] == 0xAA && i2cRxData[5] == 0x55)
+  {
+    uint16_t cx = ((uint16_t)i2cRxData[1] << 8) | i2cRxData[2];
+    g_cx = cx;
+    g_xdiff = (int16_t)cx - (int16_t)CX_CENTER;  // signed
+    g_frame_ready = 1;
+
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5); // 디버그용(선택)
+  }
+
+  // 항상 다음 수신 재등록 (길이 6 고정!)
+  HAL_I2C_Slave_Receive_IT(&hi2c1, (uint8_t*)i2cRxData, I2C_FRAME_LEN);
+}
+
 void HCSR04_TRIGGER(uint8_t direction)
 {
-	if(direction == RIGHT)
-	{
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, 0);
-		delay_us(1);
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, 1);
-		delay_us(10);
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, 0);
-
-		HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
-		__HAL_TIM_ENABLE_IT(&htim3, TIM_IT_CC1);
-	}
-	else if(direction == FRONT)
+	if(direction == FRONT)
 	{
 		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, 0);
 		delay_us(1);
@@ -106,112 +122,40 @@ void HCSR04_TRIGGER(uint8_t direction)
 		delay_us(10);
 		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, 0);
 
-		HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_2);
-		__HAL_TIM_ENABLE_IT(&htim3, TIM_IT_CC2);
-	}
-	else if(direction == LEFT)
-	{
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, 0);
-		delay_us(1);
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, 1);
-		delay_us(10);
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, 0);
-
-		HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_3);
-		__HAL_TIM_ENABLE_IT(&htim3, TIM_IT_CC3);
+		HAL_TIM_IC_Start_IT(&htim1, TIM_CHANNEL_1);
+		__HAL_TIM_ENABLE_IT(&htim1, TIM_IT_CC1);
 	}
 }
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
-	if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
+	if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
 	{
-		if(captureFlag1 == 0)
+		if(captureFlag == 0)
 		{
-			IC_Value1 = HAL_TIM_ReadCapturedValue(&htim3, TIM_CHANNEL_1);
-			captureFlag1 = 1;			// 캡쳐 플래그 set(캡쳐 했음)
-			__HAL_TIM_SET_CAPTUREPOLARITY(&htim3, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_FALLING);			// falling edge 감지로 변경
+			IC_Value1 = HAL_TIM_ReadCapturedValue(&htim1, TIM_CHANNEL_1);
+			captureFlag = 1;			// 캡쳐 플래그 set(캡쳐 했음)
+			__HAL_TIM_SET_CAPTUREPOLARITY(&htim1, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_FALLING);			// falling edge 감지로 변경
 		}
-		else if(captureFlag1 == 1)
+		else if(captureFlag == 1)
 		{
-			IC_Value2 = HAL_TIM_ReadCapturedValue(&htim3, TIM_CHANNEL_1);
-			__HAL_TIM_SET_CAPTUREPOLARITY(&htim3, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_RISING);		// 다시 rising edge 감지로 변경
+			IC_Value2 = HAL_TIM_ReadCapturedValue(&htim1, TIM_CHANNEL_1);
+			__HAL_TIM_SET_CAPTUREPOLARITY(&htim1, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_RISING);		// 다시 rising edge 감지로 변경
 
 			if(IC_Value2 > IC_Value1)
 			{
-				echoTime1 = IC_Value2 - IC_Value1;
+				echoTime = IC_Value2 - IC_Value1;
 			}
 			else if(IC_Value2 < IC_Value1)
 			{
-				echoTime1 = (0xffff - IC_Value1) + IC_Value2;
+				echoTime = (0xffff - IC_Value1) + IC_Value2;
 			}
+			distance = echoTime / 58;
+			captureFlag = 0;
 
-			distance1 = echoTime1 / 58;
-			captureFlag1 = 0;
-
-			__HAL_TIM_DISABLE_IT(&htim3, TIM_IT_CC1);
-			__HAL_TIM_CLEAR_IT(&htim3, TIM_IT_CC1);
-			HAL_TIM_IC_Stop_IT(&htim3, TIM_CHANNEL_1);
-		}
-	}
-
-	else if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
-	{
-		if(captureFlag2 == 0)
-		{
-			IC_Value3 = HAL_TIM_ReadCapturedValue(&htim3, TIM_CHANNEL_2);
-			captureFlag2 = 1;			// 캡쳐 플래그 set(캡쳐 했음)
-			__HAL_TIM_SET_CAPTUREPOLARITY(&htim3, TIM_CHANNEL_2, TIM_INPUTCHANNELPOLARITY_FALLING);			// falling edge 감지로 변경
-		}
-		else if(captureFlag2 == 1)
-		{
-			IC_Value4 = HAL_TIM_ReadCapturedValue(&htim3, TIM_CHANNEL_2);
-			__HAL_TIM_SET_CAPTUREPOLARITY(&htim3, TIM_CHANNEL_2, TIM_INPUTCHANNELPOLARITY_RISING);		// 다시 rising edge 감지로 변경
-
-			if(IC_Value4 > IC_Value3)
-			{
-				echoTime2 = IC_Value4 - IC_Value3;
-			}
-			else if(IC_Value4 < IC_Value3)
-			{
-				echoTime2 = (0xffff - IC_Value3) + IC_Value4;
-			}
-			distance2 = echoTime2 / 58;
-			captureFlag2 = 0;
-
-			__HAL_TIM_DISABLE_IT(&htim3, TIM_IT_CC2);
-			__HAL_TIM_CLEAR_IT(&htim3, TIM_IT_CC2);
-			HAL_TIM_IC_Stop_IT(&htim3, TIM_CHANNEL_2);
-		}
-	}
-
-	else if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3)
-	{
-		if(captureFlag3 == 0)
-		{
-			IC_Value5 = HAL_TIM_ReadCapturedValue(&htim3, TIM_CHANNEL_3);
-			captureFlag3 = 1;			// 캡쳐 플래그 set(캡쳐 했음)
-			__HAL_TIM_SET_CAPTUREPOLARITY(&htim3, TIM_CHANNEL_3, TIM_INPUTCHANNELPOLARITY_FALLING);			// falling edge 감지로 변경
-		}
-		else if(captureFlag3 == 1)
-		{
-			IC_Value6 = HAL_TIM_ReadCapturedValue(&htim3, TIM_CHANNEL_3);
-			__HAL_TIM_SET_CAPTUREPOLARITY(&htim3, TIM_CHANNEL_3, TIM_INPUTCHANNELPOLARITY_RISING);		// 다시 rising edge 감지로 변경
-
-			if(IC_Value6 > IC_Value5)
-			{
-				echoTime3 = IC_Value6 - IC_Value5;
-			}
-			else if(IC_Value6 < IC_Value5)
-			{
-				echoTime3 = (0xffff - IC_Value5) + IC_Value6;
-			}
-			distance3 = echoTime3 / 58;
-			captureFlag3 = 0;
-
-			__HAL_TIM_DISABLE_IT(&htim3, TIM_IT_CC3);
-			__HAL_TIM_CLEAR_IT(&htim3, TIM_IT_CC3);
-			HAL_TIM_IC_Stop_IT(&htim3, TIM_CHANNEL_3);
+			__HAL_TIM_DISABLE_IT(&htim1, TIM_IT_CC1);
+			__HAL_TIM_CLEAR_IT(&htim1, TIM_IT_CC1);
+			HAL_TIM_IC_Stop_IT(&htim1, TIM_CHANNEL_1);
 		}
 	}
 }
@@ -252,19 +196,20 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM3_Init();
-  MX_I2C1_Init();
   MX_TIM11_Init();
   MX_TIM1_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
-  i2c_lcd_init();
 
   // 초음파 센서 trigger 관련 딜레이 위한 타이머11 동작
   HAL_TIM_Base_Start(&htim11);
 
   // pwm 신호용 채널
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+
+  // raspi i2c 통신
+	HAL_I2C_Slave_Receive_IT(&hi2c1, (uint8_t *)i2cRxData, I2C_FRAME_LEN);
 
   /* USER CODE END 2 */
 

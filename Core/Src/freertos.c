@@ -27,7 +27,6 @@
 /* USER CODE BEGIN Includes */
 
 #include "ultrasonic.h"
-#include "I2C_LCD.h"
 #include "stdio.h"
 #include "stdlib.h"
 
@@ -51,7 +50,14 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 
-uint8_t avg1, avg2, avg3;
+uint8_t avg;
+extern uint8_t x_diff;
+extern volatile uint32_t lastI2cErr;
+extern volatile uint8_t i2cRestartReq;
+extern uint8_t i2cRxData[32];
+extern I2C_HandleTypeDef hi2c1;
+extern volatile int16_t  g_xdiff;
+
 
 /* USER CODE END Variables */
 /* Definitions for ultrasonicTask */
@@ -68,10 +74,10 @@ const osThreadAttr_t motorTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
-/* Definitions for lcdTask */
-osThreadId_t lcdTaskHandle;
-const osThreadAttr_t lcdTask_attributes = {
-  .name = "lcdTask",
+/* Definitions for i2c_reset */
+osThreadId_t i2c_resetHandle;
+const osThreadAttr_t i2c_reset_attributes = {
+  .name = "i2c_reset",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
@@ -83,7 +89,7 @@ const osThreadAttr_t lcdTask_attributes = {
 
 void ultrasonicFunc(void *argument);
 void motorFunc(void *argument);
-void lcdFunc(void *argument);
+void i2c_resetFunc(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -120,8 +126,8 @@ void MX_FREERTOS_Init(void) {
   /* creation of motorTask */
   motorTaskHandle = osThreadNew(motorFunc, NULL, &motorTask_attributes);
 
-  /* creation of lcdTask */
-  lcdTaskHandle = osThreadNew(lcdFunc, NULL, &lcdTask_attributes);
+  /* creation of i2c_reset */
+  i2c_resetHandle = osThreadNew(i2c_resetFunc, NULL, &i2c_reset_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -151,14 +157,6 @@ void ultrasonicFunc(void *argument)
 	  direction = FRONT;
 	  HCSR04_TRIGGER(direction);
 	  osDelay(10);
-
-	  direction = LEFT;
-	  HCSR04_TRIGGER(direction);
-	  osDelay(10);
-
-	  direction = RIGHT;
-	  HCSR04_TRIGGER(direction);
-	  osDelay(10);
   }
   /* USER CODE END ultrasonicFunc */
 }
@@ -176,125 +174,54 @@ void motorFunc(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  // 1 : 우측, 2 : 정면, 3 : 좌측
-	  dist1_buf[idx] = distance1;
-	  dist2_buf[idx] = distance2;
-	  dist3_buf[idx] = distance3;
+	  // (PB1, PB15) - LEFT WHEEL, (PB14, PB13) - RIGHT WHEEL
+	  TIM3->CCR1 = 60;
+	  TIM3->CCR2 = 60;
 
-	  idx = (idx + 1) % FILTER_COUNT;
-
-	  avg1 = get_avg(dist1_buf);	// 우측 거리
-	  avg2 = get_avg(dist2_buf);	// 정면 거리
-	  avg3 = get_avg(dist3_buf);	// 좌측 거리
-
-	  // 정면거리 30cm 이상으로 직진 가능한 경우
-	  if(avg2 > 30)
+	  if(g_xdiff > 0)				// 우회전 코너에 정상 진입한 경우. 우회전
 	  {
-		  if(avg1 < 20)	// 직진 중 우측 벽에 붙은 경우
-		  {
-			  TIM1->CCR1 = 50;
-			  TIM1->CCR2 = 50;
-
-			  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);
-			  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 0);
-			  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, 0);
-			  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, 0);
-		  }
-		  else if(avg3 < 20)	// 직진 중 좌측 벽에 붙은 경우
-		  {
-			  TIM1->CCR1 = 50;
-			  TIM1->CCR2 = 50;
-
-			  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 0);
-			  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 0);
-			  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, 1);
-			  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, 0);
-		  }
-		  else	// 정상 상태면 직진
-		  {
-			  TIM1->CCR1 = 40;
-			  TIM1->CCR2 = 40;
-
-			  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);
-			  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 0);
-			  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, 1);
-			  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, 0);
-		  }
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 0);
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 1);
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, 1);
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, 0);
 	  }
-	  // 정면 거리가 30cm 이하로 회전 판단이 필요한 경우
-	  else if(avg2 < 30)
+	  // 좌회전 코너에 이상 진입한 경우. 좌회전
+	  else if(g_xdiff < 0)
 	  {
-		  TIM1->CCR1 = 50;
-		  TIM1->CCR2 = 50;
-
-		  if((avg2 + avg3)/2 < avg1)	// 우회전 코너 판단 시작(우측 센서값 큰 경우)
-		  {
-			  if(avg1 > (avg2 + avg3))				// 우회전 코너에 정상 진입한 경우. 우회전
-			  {
-				  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 0);
-				  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 1);
-				  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, 1);
-				  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, 0);
-			  }
-			  // 좌회전 코너에 이상 진입한 경우. 좌회전
-			  else
-			  {
-				  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);
-				  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 0);
-				  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, 0);
-				  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, 1);
-			  }
-		  }
-		  else if((avg2 + avg1)/2 < avg3)	// 좌회전 코너 판단 시작(좌측 센서값 큰 경우)
-		  {
-			  if(avg3 > (avg1 + avg2))	// 좌회전 코너 정상 진입
-			  {
-				  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);
-				  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 0);
-				  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, 0);
-				  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, 1);
-			  }
-			  // 우회전 코너에 이상 진입한 경우. 우회전
-			  else
-			  {
-				  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 0);
-				  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 1);
-				  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, 1);
-				  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, 0);
-			  }
-		  }
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 0);
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, 0);
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, 1);
 	  }
-	  osDelay(30);
+	  osDelay(1);
   }
   /* USER CODE END motorFunc */
 }
 
-/* USER CODE BEGIN Header_lcdFunc */
+/* USER CODE BEGIN Header_i2c_resetFunc */
 /**
-* @brief Function implementing the lcdTask thread.
+* @brief Function implementing the i2c_reset thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_lcdFunc */
-void lcdFunc(void *argument)
+/* USER CODE END Header_i2c_resetFunc */
+void i2c_resetFunc(void *argument)
 {
-  /* USER CODE BEGIN lcdFunc */
+  /* USER CODE BEGIN i2c_resetFunc */
   /* Infinite loop */
   for(;;)
   {
-	  char temp[50];
+	  if (i2cRestartReq)
+	  {
+	    i2cRestartReq = 0;
 
-	  sprintf(temp, "R(%3d) F(%3d) L(%3d)",avg1,avg2,avg3);
-
-	  *(temp + 13) = NULL;
-	  move_cursor(0, 0);
-	  lcd_string(temp);
-	  move_cursor(1, 0);
-	  lcd_string(temp + 14);
-
-	  osDelay(100);
+//	    HAL_I2C_DeInit(&hi2c1);
+//	    HAL_I2C_Init(&hi2c1);
+	    HAL_I2C_Slave_Receive_IT(&hi2c1, (uint8_t*)i2cRxData, I2C_FRAME_LEN);
+	  }
+    osDelay(10);
   }
-  /* USER CODE END lcdFunc */
+  /* USER CODE END i2c_resetFunc */
 }
 
 /* Private application code --------------------------------------------------*/

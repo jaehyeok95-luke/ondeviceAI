@@ -6,9 +6,7 @@
  */
 #include "ultrasonic.h"
 
-uint8_t dist1_buf[FILTER_COUNT] = {0};
-uint8_t dist2_buf[FILTER_COUNT] = {0};
-uint8_t dist3_buf[FILTER_COUNT] = {0};
+uint8_t dist_buf[FILTER_COUNT] = {0};
 uint8_t idx = 0;
 
 uint8_t get_avg(uint8_t *buf)
