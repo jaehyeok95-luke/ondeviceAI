@@ -1,0 +1,37 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "tcf-debug",
+      "request": "launch",
+      "name": "app_watchRev7_app_hw_1",
+      "debugType": "baremetal-fpga",
+      "attachToRunningTargetOptions": {
+        "targetSetupMode": "standalone",
+        "executeScript": true,
+        "scriptPath": ""
+      },
+      "autoAttachProcessChildren": false,
+      "target": {
+        "targetConnectionId": "Local",
+        "peersIniPath": "../../_ide/.peers.ini",
+        "context": "fpga"
+      },
+      "pathMap": [],
+      "targetSetup": {
+        "resetSystem": true,
+        "programDevice": true,
+        "bitstreamFile": "${workspaceFolder}/app_watchRev7/_ide/bitstream/soc_watchRev7_wrapper.bit",
+        "downloadElf": [
+          {
+            "core": "microblaze_riscv_0",
+            "resetProcessor": true,
+            "elfFile": "${workspaceFolder}/app_watchRev7/build/app_watchRev7.elf",
+            "stopAtEntry": false
+          }
+        ]
+      },
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

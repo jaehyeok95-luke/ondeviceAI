@@ -1,0 +1,29 @@
+# Vivado
+.vivado/
+.runs/
+.cache/
+.hw/
+.sim/
+.ip_user_files/
+.gen/
+
+# Vitis
+.metadata/
+.build/
+Debug/
+Release/
+Xil/
+*.elf
+
+# HLS
+solution*/
+csim/
+csynth/
+syn/
+impl/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
