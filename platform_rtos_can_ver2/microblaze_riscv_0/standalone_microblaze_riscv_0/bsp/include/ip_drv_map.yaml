@@ -1,0 +1,15 @@
+axi_uartlite_0:
+- axi_uartlite
+- uartlite
+microblaze_riscv_0_axi_intc:
+- axi_intc
+- intc
+myip_RTOS_0:
+- myip_RTOS
+- None
+myip_can_0:
+- myip_can
+- None
+myip_irq_cntr_0:
+- myip_irq_cntr
+- None

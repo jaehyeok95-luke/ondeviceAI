@@ -15,7 +15,7 @@
 	)
 	(
 		// Users to add ports here
-        input wire [7:0] irq_in,
+        input wire irq_in,
         output wire irq_out,
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -302,17 +302,21 @@
 	        end                                         
 	// Implement memory mapped register select and read logic generation
 	reg [7:0] clr_irq_pulse;
+	reg [6:0] soft_irq_pulse;
 	wire slv_reg_wren;
 	assign slv_reg_wren = S_AXI_AWREADY & S_AXI_AWVALID & S_AXI_WREADY  & S_AXI_WVALID;
 	always @(posedge S_AXI_ACLK) begin
       if (!S_AXI_ARESETN) begin
         clr_irq_pulse  <= 8'd0;
+        soft_irq_pulse <= 7'd0;
       end else begin
         // 기본은 0
         clr_irq_pulse  <= 8'd0;
+        soft_irq_pulse <= 7'd0;
         // slv_reg_wren은 AXI write handshake (템플릿에 있음)
         if (slv_reg_wren && (S_AXI_AWADDR[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 2'h2)) begin
             clr_irq_pulse <= S_AXI_WDATA[7:0];
+            soft_irq_pulse <= S_AXI_WDATA[14:8];
         end
       end
     end
@@ -326,7 +330,7 @@
 	  (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 2'h2) ? slv_reg2 : 
 	  (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 2'h3) ? IRQ_STATUS : 0; 
 	// Add user logic here
-    irq_cntr inst_irq(.clk(S_AXI_ACLK), .reset_p(~S_AXI_ARESETN), .irq_in(irq_in), .en(slv_reg0[7:0]), .clear(clr_irq_pulse), .pending(PENDING), .irq_id(IRQ_ID), .irq_out(irq_out), .valid(VALID));
+    irq_cntr inst_irq(.clk(S_AXI_ACLK), .reset_p(~S_AXI_ARESETN), .irq_in({soft_irq_pulse, irq_in}), .en({slv_reg0[7:1], 1'd1}), .clear(clr_irq_pulse), .pending(PENDING), .irq_id(IRQ_ID), .irq_out(irq_out), .valid(VALID));
 	// User logic ends
 
 	endmodule

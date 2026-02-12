@@ -15,7 +15,7 @@
 	)
 	(
 		// Users to add ports here
-		input wire [7:0] irq_in,
+		input wire irq_in,
 		output wire irq_out, 
 		// User ports ends
 		// Do not modify the ports beyond this line
