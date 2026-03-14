@@ -1,0 +1,21 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:55
+/home/jaehyeok95/team_project_npu/team_project_npu.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sim_1/new/npu_core_tb.sv,1773421442,systemVerilog,,,,npu_core_tb,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sim_1/new/step1_tb.sv,1773381758,systemVerilog,,,,step1_tb,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sim_1/new/step2_tb.sv,1773383961,systemVerilog,,,,step2b_tb,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sim_1/new/step4_tb.sv,1773394121,systemVerilog,,,,step4_tb,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sim_1/new/step5_tb.sv,1773397492,systemVerilog,,,,step5_tb,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sim_1/new/step6_tb.sv,1773399005,systemVerilog,,,,step6_tb,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sim_1/new/step7_tb.v,1773399295,verilog,,,,step7_tb,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/argmax.v,1773409359,verilog,,/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/fc_layer.v,,argmax,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/bram_test_top.sv,1773399249,systemVerilog,,/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/conv3x3_relu.v,,step1_img_load;step2_patch_test;step3_conv1_test;step4_conv_pool_test;step5_conv_pool_pipeline;step6_conv12_pool12;step7_conv123_pool123,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/conv3x3_relu.v,1773397936,systemVerilog,,/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/line_buffer.sv,,conv3x3_relu,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/ddr_weight_sim.sv,1773400169,systemVerilog,,/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/line_buffer.sv,,ddr_weight_sim,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/fc_layer.v,1773411632,verilog,,/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/maxpool2x2.v,,fc_relu,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/line_buffer.sv,1773384047,systemVerilog,,/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/npu_top.v,,fmap_bram;patch_reader,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/maxpool2x2.v,1773307136,verilog,,/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/weight_bram.v,,maxpool2x2,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/npu_top.v,1773465622,systemVerilog,,/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sim_1/new/npu_core_tb.sv,,npu_core,,uvm,,,,,,
+/home/jaehyeok95/team_project_npu/team_project_npu.srcs/sources_1/new/weight_bram.v,1773400872,verilog,,,,weight_bram_conv;weight_bram_conv1_only;weight_buf,,uvm,,,,,,
