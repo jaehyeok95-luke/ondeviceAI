@@ -1,0 +1,3 @@
+/home/jaehyeok95/vitis_workspace/platform_npu/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+/home/jaehyeok95/vitis_workspace/platform_npu/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+/home/jaehyeok95/vitis_workspace/platform_npu/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir
