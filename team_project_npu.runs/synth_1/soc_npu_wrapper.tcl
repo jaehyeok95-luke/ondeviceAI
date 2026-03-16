@@ -58,6 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
 set_param bd.open.in_stealth_mode 1
+set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -70,8 +71,6 @@ set_property parent.project_path /home/jaehyeok95/team_project_npu/team_project_
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {/home/jaehyeok95/.Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
-set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
 set_property ip_repo_paths /home/jaehyeok95/ip_repo/myip_npu_OCR_1_0 [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/jaehyeok95/team_project_npu/team_project_npu.cache/ip [current_project]
@@ -151,9 +150,6 @@ set_property used_in_implementation false [get_files -all /home/jaehyeok95/team_
 set_property used_in_synthesis false [get_files -all /home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_0/soc_npu_axi_mem_intercon_imp_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_0/soc_npu_axi_mem_intercon_imp_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_0/soc_npu_axi_mem_intercon_imp_auto_us_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all /home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_1/soc_npu_axi_mem_intercon_imp_auto_us_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_1/soc_npu_axi_mem_intercon_imp_auto_us_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_1/soc_npu_axi_mem_intercon_imp_auto_us_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_pc_0/soc_npu_axi_mem_intercon_imp_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/soc_npu_ooc.xdc]
 

@@ -7,10 +7,11 @@
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Sat Mar 14 15:10:24 2026
+  **** Start of session at: Sun Mar 15 21:34:29 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
+Sourcing tcl script '/home/jaehyeok95/.Xilinx/Vivado/Vivado_init.tcl'
 source soc_npu_myip_npu_OCR_0_1.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jaehyeok95/ip_repo/myip_npu_OCR_1_0'.
@@ -23,52 +24,84 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12665
+INFO: [Synth 8-7075] Helper process launched with PID 105453
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1941.742 ; gain = 422.797 ; free physical = 2061 ; free virtual = 6090
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1937.598 ; gain = 417.828 ; free physical = 160 ; free virtual = 1490
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'soc_npu_myip_npu_OCR_0_1' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_myip_npu_OCR_0_1/synth/soc_npu_myip_npu_OCR_0_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'myip_npu_OCR' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR.v:3]
-INFO: [Synth 8-6157] synthesizing module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:88]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:186]
-INFO: [Synth 8-6155] done synthesizing module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:3]
-INFO: [Synth 8-6157] synthesizing module 'npu_core' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/npu_top.v:3]
-INFO: [Synth 8-6157] synthesizing module 'fmap_bram' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/line_buffer.sv:6]
-INFO: [Synth 8-6155] done synthesizing module 'fmap_bram' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/line_buffer.sv:6]
-INFO: [Synth 8-6157] synthesizing module 'fmap_bram__parameterized0' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/line_buffer.sv:6]
-INFO: [Synth 8-6155] done synthesizing module 'fmap_bram__parameterized0' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/line_buffer.sv:6]
-INFO: [Synth 8-6157] synthesizing module 'weight_buf' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/weight_bram.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'weight_buf' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/weight_bram.v:3]
-INFO: [Synth 8-6157] synthesizing module 'patch_reader' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/line_buffer.sv:34]
-INFO: [Synth 8-6155] done synthesizing module 'patch_reader' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/line_buffer.sv:34]
-INFO: [Synth 8-6157] synthesizing module 'conv3x3_relu' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'conv3x3_relu' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:3]
-INFO: [Synth 8-6157] synthesizing module 'maxpool2x2' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/maxpool2x2.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'maxpool2x2' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/maxpool2x2.v:3]
-INFO: [Synth 8-6157] synthesizing module 'fc_relu' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/fc_layer.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'fc_relu' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/fc_layer.v:3]
-INFO: [Synth 8-6157] synthesizing module 'argmax' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/argmax.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'argmax' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/argmax.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/npu_top.v:643]
-INFO: [Synth 8-6155] done synthesizing module 'npu_core' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/npu_top.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'myip_npu_OCR' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR.v:3]
+INFO: [Synth 8-6157] synthesizing module 'myip_npu_OCR' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR.v:3]
+INFO: [Synth 8-6157] synthesizing module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:92]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:190]
+INFO: [Synth 8-6155] done synthesizing module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:3]
+WARNING: [Synth 8-689] width (3) of port connection 'dbg_state' does not match port width (4) of module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR.v:97]
+INFO: [Synth 8-6157] synthesizing module 'npu_core' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/npu_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram__parameterized0' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram__parameterized0' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram__parameterized1' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram__parameterized1' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram__parameterized2' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram__parameterized2' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram__parameterized3' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram__parameterized3' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram__parameterized4' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram__parameterized4' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram__parameterized5' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram__parameterized5' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram__parameterized6' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram__parameterized6' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram__parameterized7' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram__parameterized7' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'weight_buf' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/weight_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'weight_buf' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/weight_bram.v:3]
+INFO: [Synth 8-6157] synthesizing module 'patch_reader' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:34]
+INFO: [Synth 8-6155] done synthesizing module 'patch_reader' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'conv3x3_relu' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'conv3x3_relu' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'maxpool2x2' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/maxpool2x2.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'maxpool2x2' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/maxpool2x2.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fc_relu' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/fc_layer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'fc_relu' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/fc_layer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'argmax' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/argmax.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'argmax' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/argmax.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/npu_top.v:758]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/npu_top.v:668]
+INFO: [Synth 8-6155] done synthesizing module 'npu_core' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/npu_top.v:3]
+WARNING: [Synth 8-689] width (3) of port connection 'dbg_state' does not match port width (4) of module 'npu_core' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'myip_npu_OCR' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'soc_npu_myip_npu_OCR_0_1' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_myip_npu_OCR_0_1/synth/soc_npu_myip_npu_OCR_0_1.v:53]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:132]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:134]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg4_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:135]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg5_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:136]
-WARNING: [Synth 8-6014] Unused sequential element rd_row_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/line_buffer.sv:98]
-WARNING: [Synth 8-6014] Unused sequential element rd_col_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/line_buffer.sv:99]
-WARNING: [Synth 8-7137] Register patch_reg_reg[0] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:149]
-WARNING: [Synth 8-7137] Register patch_reg_reg[1] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:149]
-WARNING: [Synth 8-7137] Register patch_reg_reg[2] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:149]
-WARNING: [Synth 8-7137] Register patch_reg_reg[3] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:149]
-WARNING: [Synth 8-7137] Register patch_reg_reg[4] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:149]
-WARNING: [Synth 8-7137] Register patch_reg_reg[5] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:149]
-WARNING: [Synth 8-7137] Register patch_reg_reg[6] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:149]
-WARNING: [Synth 8-7137] Register patch_reg_reg[7] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:149]
-WARNING: [Synth 8-7137] Register patch_reg_reg[8] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/001c/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:136]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:138]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg4_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:139]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg5_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:140]
+WARNING: [Synth 8-6014] Unused sequential element rd_row_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:98]
+WARNING: [Synth 8-6014] Unused sequential element rd_col_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/line_buffer.sv:99]
+WARNING: [Synth 8-7137] Register patch_reg_reg[0] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-7137] Register patch_reg_reg[1] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-7137] Register patch_reg_reg[2] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-7137] Register patch_reg_reg[3] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-7137] Register patch_reg_reg[4] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-7137] Register patch_reg_reg[5] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-7137] Register patch_reg_reg[6] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-7137] Register patch_reg_reg[7] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-7137] Register patch_reg_reg[8] in module conv3x3_relu has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v:149]
+WARNING: [Synth 8-7129] Port debug_addr[14] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[13] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[12] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[11] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[10] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[9] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[8] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[7] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[6] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[5] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[4] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[3] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[2] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[1] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[0] in module npu_core is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axis_tlast in module npu_core is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module myip_npu_OCR_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module myip_npu_OCR_slave_lite_v1_0_S00_AXI is either unconnected or has no load
@@ -78,46 +111,47 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module myip_npu_OCR_slave_lite_v
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module myip_npu_OCR_slave_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axis_aclk in module myip_npu_OCR is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axis_aresetn in module myip_npu_OCR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[0] in module myip_npu_OCR is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2031.711 ; gain = 512.766 ; free physical = 2032 ; free virtual = 6003
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2032.566 ; gain = 512.797 ; free physical = 128 ; free virtual = 1398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2046.555 ; gain = 527.609 ; free physical = 2032 ; free virtual = 6003
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2041.473 ; gain = 521.703 ; free physical = 126 ; free virtual = 1397
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2046.555 ; gain = 527.609 ; free physical = 2032 ; free virtual = 6003
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2041.473 ; gain = 521.703 ; free physical = 126 ; free virtual = 1397
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2046.555 ; gain = 0.000 ; free physical = 2032 ; free virtual = 6003
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2041.473 ; gain = 0.000 ; free physical = 123 ; free virtual = 1401
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2195.305 ; gain = 0.000 ; free physical = 2035 ; free virtual = 6006
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.223 ; gain = 0.000 ; free physical = 121 ; free virtual = 1385
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2195.305 ; gain = 0.000 ; free physical = 2035 ; free virtual = 6006
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2191.223 ; gain = 0.000 ; free physical = 123 ; free virtual = 1386
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2195.305 ; gain = 676.359 ; free physical = 2082 ; free virtual = 6053
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2191.223 ; gain = 671.453 ; free physical = 140 ; free virtual = 1384
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2203.309 ; gain = 684.363 ; free physical = 2082 ; free virtual = 6053
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2199.227 ; gain = 679.457 ; free physical = 140 ; free virtual = 1384
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2203.309 ; gain = 684.363 ; free physical = 2082 ; free virtual = 6053
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2199.227 ; gain = 679.457 ; free physical = 139 ; free virtual = 1384
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI'
 INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI'
@@ -214,18 +248,19 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                  S_IDLE |                         10000000 |                              000
-              S_LOAD_IMG |                         01000000 |                              001
-           S_LAYER_SETUP |                         00000100 |                              010
-              S_DDR_LOAD |                         00001000 |                              011
-               S_COMPUTE |                         00100000 |                              100
-                  S_POOL |                         00010000 |                              101
-               S_NEXT_CH |                         00000001 |                              110
-                  S_DONE |                         00000010 |                              111
+                  S_IDLE |                        000000001 |                             0000
+              S_LOAD_IMG |                        000000010 |                             0001
+           S_LAYER_SETUP |                        000000100 |                             0010
+              S_DDR_LOAD |                        000001000 |                             0011
+              S_DDR_DONE |                        000010000 |                             1000
+               S_COMPUTE |                        000100000 |                             0100
+                  S_POOL |                        001000000 |                             0101
+               S_NEXT_CH |                        010000000 |                             0110
+                  S_DONE |                        100000000 |                             0111
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'npu_core'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2203.309 ; gain = 684.363 ; free physical = 2079 ; free virtual = 6051
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2199.227 ; gain = 679.457 ; free physical = 122 ; free virtual = 1376
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -234,7 +269,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   32 Bit       Adders := 3     
 	   2 Input   17 Bit       Adders := 1     
-	   2 Input   15 Bit       Adders := 4     
+	   2 Input   15 Bit       Adders := 5     
 	   2 Input   13 Bit       Adders := 1     
 	   2 Input   12 Bit       Adders := 2     
 	   2 Input   10 Bit       Adders := 2     
@@ -249,51 +284,59 @@ Detailed RTL Component Info :
 	               18 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
 	               15 Bit    Registers := 12    
-	               12 Bit    Registers := 4     
+	               12 Bit    Registers := 7     
 	               10 Bit    Registers := 1     
-	                9 Bit    Registers := 2     
-	                8 Bit    Registers := 54    
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 62    
 	                7 Bit    Registers := 7     
 	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
+	                4 Bit    Registers := 5     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 29    
+	                1 Bit    Registers := 28    
 +---RAMs : 
-	             256K Bit	(32768 X 8 bit)          RAMs := 2     
-	              32K Bit	(4096 X 8 bit)          RAMs := 2     
+	             256K Bit	(32768 X 8 bit)          RAMs := 1     
+	             128K Bit	(16384 X 8 bit)          RAMs := 1     
+	              64K Bit	(8192 X 8 bit)          RAMs := 1     
+	              32K Bit	(4096 X 8 bit)          RAMs := 3     
+	              16K Bit	(2048 X 8 bit)          RAMs := 1     
+	               4K Bit	(512 X 8 bit)          RAMs := 1     
+	               2K Bit	(256 X 8 bit)          RAMs := 1     
+	             1024 Bit	(128 X 8 bit)          RAMs := 1     
+	              256 Bit	(32 X 8 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 2     
 	   7 Input   32 Bit        Muxes := 3     
 	  14 Input   32 Bit        Muxes := 1     
-	   2 Input   15 Bit        Muxes := 15    
+	   2 Input   15 Bit        Muxes := 3     
 	  14 Input   15 Bit        Muxes := 1     
 	  13 Input   15 Bit        Muxes := 1     
-	   4 Input   15 Bit        Muxes := 1     
-	   8 Input   15 Bit        Muxes := 2     
+	   4 Input   15 Bit        Muxes := 2     
+	   9 Input   15 Bit        Muxes := 2     
 	  14 Input   14 Bit        Muxes := 1     
-	   2 Input   14 Bit        Muxes := 4     
+	   2 Input   14 Bit        Muxes := 5     
 	  13 Input   13 Bit        Muxes := 1     
-	   2 Input   13 Bit        Muxes := 3     
+	   2 Input   13 Bit        Muxes := 4     
 	   7 Input   12 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 3     
-	   8 Input   12 Bit        Muxes := 1     
+	   9 Input   12 Bit        Muxes := 1     
 	  14 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 1     
-	   4 Input    9 Bit        Muxes := 1     
-	   8 Input    9 Bit        Muxes := 1     
+	   4 Input    9 Bit        Muxes := 2     
+	   9 Input    9 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 5     
 	  14 Input    8 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 24    
+	   2 Input    8 Bit        Muxes := 13    
 	  13 Input    8 Bit        Muxes := 1     
-	   4 Input    8 Bit        Muxes := 3     
-	   8 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 5     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 6     
 	  14 Input    7 Bit        Muxes := 3     
 	  13 Input    7 Bit        Muxes := 2     
 	   5 Input    5 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
 	   5 Input    4 Bit        Muxes := 1     
 	  14 Input    4 Bit        Muxes := 1     
-	   8 Input    4 Bit        Muxes := 1     
+	   9 Input    4 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 2     
 	   7 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 2     
@@ -301,14 +344,14 @@ Detailed RTL Component Info :
 	   5 Input    2 Bit        Muxes := 2     
 	   4 Input    2 Bit        Muxes := 1     
 	  14 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 35    
+	   2 Input    1 Bit        Muxes := 32    
 	   3 Input    1 Bit        Muxes := 15    
 	   5 Input    1 Bit        Muxes := 13    
-	  14 Input    1 Bit        Muxes := 12    
+	  14 Input    1 Bit        Muxes := 10    
 	  13 Input    1 Bit        Muxes := 7     
 	   7 Input    1 Bit        Muxes := 9     
 	   4 Input    1 Bit        Muxes := 15    
-	   8 Input    1 Bit        Muxes := 21    
+	   9 Input    1 Bit        Muxes := 19    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -333,13 +376,28 @@ DSP Report: operator wr_addr2 is absorbed into DSP wr_addr2.
 DSP Report: Generating DSP wr_addr0, operation Mode is: PCIN+A*B.
 DSP Report: operator wr_addr0 is absorbed into DSP wr_addr0.
 DSP Report: operator ch_base_out is absorbed into DSP wr_addr0.
-DSP Report: Generating DSP patch_ch_offset_wide, operation Mode is: A*B.
-DSP Report: operator patch_ch_offset_wide is absorbed into DSP patch_ch_offset_wide.
-DSP Report: Generating DSP pool_wr_offset0, operation Mode is: A*B.
-DSP Report: operator pool_wr_offset0 is absorbed into DSP pool_wr_offset0.
+DSP Report: Generating DSP patch_ch_offset_r_reg, operation Mode is: (A*B)'.
+DSP Report: register patch_ch_offset_r_reg is absorbed into DSP patch_ch_offset_r_reg.
+DSP Report: operator patch_ch_offset_r0 is absorbed into DSP patch_ch_offset_r_reg.
+WARNING: [Synth 8-7129] Port debug_addr[14] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[13] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[12] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[11] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[10] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[9] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[8] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[7] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[6] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[5] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[4] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[3] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[2] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[1] in module npu_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[0] in module npu_core is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axis_tlast in module npu_core is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axis_aclk in module soc_npu_myip_npu_OCR_0_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axis_aresetn in module soc_npu_myip_npu_OCR_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[0] in module soc_npu_myip_npu_OCR_0_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module soc_npu_myip_npu_OCR_0_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module soc_npu_myip_npu_OCR_0_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module soc_npu_myip_npu_OCR_0_1 is either unconnected or has no load
@@ -347,13 +405,12 @@ WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module soc_npu_myip_npu_OCR_0_
 WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module soc_npu_myip_npu_OCR_0_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module soc_npu_myip_npu_OCR_0_1 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2203.309 ; gain = 684.363 ; free physical = 2088 ; free virtual = 6061
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2199.227 ; gain = 679.457 ; free physical = 155 ; free virtual = 1368
 ---------------------------------------------------------------------------------
  Sort Area is  wr_addr2_2 : 0 0 : 275 867 : Used 1 time 0
  Sort Area is  wr_addr2_2 : 0 1 : 592 867 : Used 1 time 0
- Sort Area is  pool_wr_offset0_7 : 0 0 : 784 784 : Used 1 time 0
  Sort Area is  p_1_out_0 : 0 0 : 698 698 : Used 1 time 0
- Sort Area is  patch_ch_offset_wide_5 : 0 0 : 654 654 : Used 1 time 0
+ Sort Area is  patch_ch_offset_r_reg_5 : 0 0 : 669 669 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -362,13 +419,28 @@ Block RAM: Preliminary Mapping Report (see note below)
 +------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name       | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|\inst/u_npu_core  | u_fmap_a/mem_reg    | 32 K x 8(READ_FIRST)   | W |   | 32 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
-|\inst/u_npu_core  | u_fmap_b/mem_reg    | 32 K x 8(READ_FIRST)   | W |   | 32 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|\inst/u_npu_core  | u_fmap_img/mem_reg  | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|\inst/u_npu_core  | u_fmap_c1/mem_reg   | 32 K x 8(READ_FIRST)   | W |   | 32 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|\inst/u_npu_core  | u_fmap_c2/mem_reg   | 16 K x 8(READ_FIRST)   | W |   | 16 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|\inst/u_npu_core  | u_fmap_c3/mem_reg   | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|\inst/u_npu_core  | u_fmap_c4/mem_reg   | 2 K x 8(READ_FIRST)    | W |   | 2 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|\inst/u_npu_core  | u_fmap_c5/mem_reg   | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|\inst/u_npu_core  | u_fmap_fc1/mem_reg  | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|\inst/u_npu_core  | u_fmap_fc2/mem_reg  | 128 x 8(READ_FIRST)    | W |   | 128 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 |\inst/u_npu_core  | u_fmap_temp/mem_reg | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 |\inst/u_npu_core  | u_wbuf/mem_reg      | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 +------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------------+---------------------+-----------+----------------------+-------------+
+|Module Name       | RTL Object          | Inference | Size (Depth x Width) | Primitives  | 
++------------------+---------------------+-----------+----------------------+-------------+
+|\inst/u_npu_core  | u_fmap_head/mem_reg | Implied   | 32 x 8               | RAM32M x 2  | 
++------------------+---------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
 +------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
@@ -377,8 +449,7 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |maxpool2x2  | C+A*B+CarryIn | 15     | 7      | 7      | -      | 15     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |maxpool2x2  | A*B           | 7      | 6      | -      | -      | 13     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |maxpool2x2  | PCIN+A*B      | 14     | 6      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|npu_core    | A*B           | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|npu_core    | A*B           | 11     | 10     | -      | -      | 21     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|npu_core    | (A*B)'        | 15     | 7      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 +------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -389,13 +460,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2273.309 ; gain = 754.363 ; free physical = 1986 ; free virtual = 5954
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2279.227 ; gain = 759.457 ; free physical = 146 ; free virtual = 1240
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2274.309 ; gain = 755.363 ; free physical = 1986 ; free virtual = 5955
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2281.227 ; gain = 761.457 ; free physical = 183 ; free virtual = 1238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -405,11 +476,25 @@ Block RAM: Final Mapping Report
 +------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name       | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|\inst/u_npu_core  | u_fmap_a/mem_reg    | 32 K x 8(READ_FIRST)   | W |   | 32 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
-|\inst/u_npu_core  | u_fmap_b/mem_reg    | 32 K x 8(READ_FIRST)   | W |   | 32 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|\inst/u_npu_core  | u_fmap_img/mem_reg  | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|\inst/u_npu_core  | u_fmap_c1/mem_reg   | 32 K x 8(READ_FIRST)   | W |   | 32 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|\inst/u_npu_core  | u_fmap_c2/mem_reg   | 16 K x 8(READ_FIRST)   | W |   | 16 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|\inst/u_npu_core  | u_fmap_c3/mem_reg   | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|\inst/u_npu_core  | u_fmap_c4/mem_reg   | 2 K x 8(READ_FIRST)    | W |   | 2 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|\inst/u_npu_core  | u_fmap_c5/mem_reg   | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|\inst/u_npu_core  | u_fmap_fc1/mem_reg  | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|\inst/u_npu_core  | u_fmap_fc2/mem_reg  | 128 x 8(READ_FIRST)    | W |   | 128 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 |\inst/u_npu_core  | u_fmap_temp/mem_reg | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 |\inst/u_npu_core  | u_wbuf/mem_reg      | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 +------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------------+---------------------+-----------+----------------------+-------------+
+|Module Name       | RTL Object          | Inference | Size (Depth x Width) | Primitives  | 
++------------------+---------------------+-----------+----------------------+-------------+
+|\inst/u_npu_core  | u_fmap_head/mem_reg | Implied   | 32 x 8               | RAM32M x 2  | 
++------------------+---------------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -417,26 +502,29 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_a/mem_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_a/mem_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_a/mem_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_a/mem_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_a/mem_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_a/mem_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_a/mem_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_a/mem_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_b/mem_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_b/mem_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_b/mem_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_b/mem_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_b/mem_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_b/mem_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_b/mem_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_b/mem_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c1/mem_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c1/mem_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c1/mem_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c1/mem_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c1/mem_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c1/mem_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c1/mem_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c1/mem_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c2/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c2/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c2/mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c2/mem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c3/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c3/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_c5/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_fc1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_fc2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_fmap_temp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/u_npu_core/u_wbuf/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2297.340 ; gain = 778.395 ; free physical = 1962 ; free virtual = 5931
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2308.266 ; gain = 788.496 ; free physical = 171 ; free virtual = 1229
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -454,37 +542,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2452.152 ; gain = 933.207 ; free physical = 1853 ; free virtual = 5822
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2463.078 ; gain = 943.309 ; free physical = 117 ; free virtual = 1133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2452.152 ; gain = 933.207 ; free physical = 1853 ; free virtual = 5822
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2463.078 ; gain = 943.309 ; free physical = 117 ; free virtual = 1133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2452.152 ; gain = 933.207 ; free physical = 1850 ; free virtual = 5819
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2463.078 ; gain = 943.309 ; free physical = 117 ; free virtual = 1134
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2452.152 ; gain = 933.207 ; free physical = 1850 ; free virtual = 5819
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2463.078 ; gain = 943.309 ; free physical = 117 ; free virtual = 1134
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2455.121 ; gain = 936.176 ; free physical = 1850 ; free virtual = 5819
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2466.047 ; gain = 946.277 ; free physical = 116 ; free virtual = 1133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2455.121 ; gain = 936.176 ; free physical = 1850 ; free virtual = 5819
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2466.047 ; gain = 946.277 ; free physical = 116 ; free virtual = 1133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -494,8 +582,7 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|npu_core    | A*B           | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|npu_core    | A*B           | 11     | 10     | -      | -      | 21     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|npu_core    | (A*B)'        | 15     | 7      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 1    | 
 |maxpool2x2  | C+A*B+CARRYIN | 15     | 7      | 7      | -      | 15     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |maxpool2x2  | A*B           | 7      | 6      | -      | -      | 13     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |maxpool2x2  | PCIN+A*B      | 14     | 6      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
@@ -512,47 +599,52 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |   170|
-|2     |DSP48E1  |     5|
-|4     |LUT1     |     8|
-|5     |LUT2     |   443|
-|6     |LUT3     |   155|
-|7     |LUT4     |   327|
-|8     |LUT5     |   262|
-|9     |LUT6     |   419|
-|10    |RAMB36E1 |    18|
-|12    |FDCE     |   743|
-|13    |FDPE     |     6|
-|14    |FDRE     |   153|
+|1     |CARRY4   |   174|
+|2     |DSP48E1  |     4|
+|5     |LUT1     |     7|
+|6     |LUT2     |   446|
+|7     |LUT3     |   145|
+|8     |LUT4     |   329|
+|9     |LUT5     |   295|
+|10    |LUT6     |   424|
+|11    |RAM32M   |     1|
+|12    |RAM32X1D |     2|
+|13    |RAMB18E1 |     4|
+|15    |RAMB36E1 |    17|
+|19    |FDCE     |   731|
+|20    |FDPE     |    14|
+|21    |FDRE     |   203|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2455.121 ; gain = 936.176 ; free physical = 1850 ; free virtual = 5819
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2466.047 ; gain = 946.277 ; free physical = 116 ; free virtual = 1134
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2455.121 ; gain = 787.426 ; free physical = 1850 ; free virtual = 5819
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2455.129 ; gain = 936.176 ; free physical = 1850 ; free virtual = 5819
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2466.047 ; gain = 796.527 ; free physical = 140 ; free virtual = 1144
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2466.055 ; gain = 946.277 ; free physical = 139 ; free virtual = 1145
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2455.129 ; gain = 0.000 ; free physical = 2013 ; free virtual = 5982
-INFO: [Netlist 29-17] Analyzing 193 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2466.055 ; gain = 0.000 ; free physical = 120 ; free virtual = 1149
+INFO: [Netlist 29-17] Analyzing 202 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2511.148 ; gain = 0.000 ; free physical = 2011 ; free virtual = 5984
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2522.074 ; gain = 0.000 ; free physical = 218 ; free virtual = 1313
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
 
-Synth Design complete | Checksum: 2472ea7c
+Synth Design complete | Checksum: 49a6bb27
 INFO: [Common 17-83] Releasing license: Synthesis
-80 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+98 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:33 . Memory (MB): peak = 2511.148 ; gain = 1133.902 ; free physical = 2011 ; free virtual = 5984
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1743.622; main = 1743.622; forked = 278.502
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3116.570; main = 2511.152; forked = 913.258
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2535.160 ; gain = 0.000 ; free physical = 2011 ; free virtual = 5984
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 2522.074 ; gain = 1102.777 ; free physical = 212 ; free virtual = 1312
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1531.373; main = 1463.955; forked = 260.499
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3253.965; main = 2522.078; forked = 915.695
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2546.086 ; gain = 0.000 ; free physical = 207 ; free virtual = 1312
 INFO: [Common 17-1381] The checkpoint '/home/jaehyeok95/team_project_npu/team_project_npu.runs/soc_npu_myip_npu_OCR_0_1_synth_1/soc_npu_myip_npu_OCR_0_1.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP soc_npu_myip_npu_OCR_0_1, cache-ID = 0e1e6a3b30181b8e
-INFO: [Coretcl 2-1174] Renamed 12 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2535.160 ; gain = 0.000 ; free physical = 2005 ; free virtual = 5981
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP soc_npu_myip_npu_OCR_0_1, cache-ID = e6a1ce2ba34dd3af
+INFO: [Coretcl 2-1174] Renamed 19 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2546.086 ; gain = 0.000 ; free physical = 168 ; free virtual = 1288
 INFO: [Common 17-1381] The checkpoint '/home/jaehyeok95/team_project_npu/team_project_npu.runs/soc_npu_myip_npu_OCR_0_1_synth_1/soc_npu_myip_npu_OCR_0_1.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file soc_npu_myip_npu_OCR_0_1_utilization_synth.rpt -pb soc_npu_myip_npu_OCR_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 14 15:11:03 2026...
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 15 21:35:15 2026...

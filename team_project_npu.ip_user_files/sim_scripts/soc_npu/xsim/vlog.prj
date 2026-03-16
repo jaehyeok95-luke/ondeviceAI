@@ -1,26 +1,26 @@
 verilog xil_defaultlib --include "/home/jaehyeok95/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/ec67/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/86fe/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/f0b6/hdl/verilog" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/0127/hdl/verilog" \
 "../../../bd/soc_npu/ip/soc_npu_processing_system7_0_1/sim/soc_npu_processing_system7_0_1.v" \
-"../../../bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v" \
-"../../../bd/soc_npu/ipshared/001c/src/argmax.v" \
+"../../../bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_npu/ipshared/a7cf/src/argmax.v" \
 
 sv xil_defaultlib --include "/home/jaehyeok95/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/ec67/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/86fe/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/f0b6/hdl/verilog" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/0127/hdl/verilog" \
-"../../../bd/soc_npu/ipshared/001c/src/conv3x3_relu.v" \
+"../../../bd/soc_npu/ipshared/a7cf/src/conv3x3_relu.v" \
 
 verilog xil_defaultlib --include "/home/jaehyeok95/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/ec67/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/86fe/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/f0b6/hdl/verilog" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/0127/hdl/verilog" \
-"../../../bd/soc_npu/ipshared/001c/src/fc_layer.v" \
-"../../../bd/soc_npu/ipshared/001c/src/maxpool2x2.v" \
+"../../../bd/soc_npu/ipshared/a7cf/src/fc_layer.v" \
+"../../../bd/soc_npu/ipshared/a7cf/src/maxpool2x2.v" \
 
 sv xil_defaultlib --include "/home/jaehyeok95/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/ec67/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/86fe/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/f0b6/hdl/verilog" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/0127/hdl/verilog" \
-"../../../bd/soc_npu/ipshared/001c/src/npu_top.v" \
+"../../../bd/soc_npu/ipshared/a7cf/src/npu_top.v" \
 
 verilog xil_defaultlib --include "/home/jaehyeok95/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/ec67/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/86fe/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/f0b6/hdl/verilog" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/0127/hdl/verilog" \
-"../../../bd/soc_npu/ipshared/001c/src/weight_bram.v" \
+"../../../bd/soc_npu/ipshared/a7cf/src/weight_bram.v" \
 
 sv xil_defaultlib --include "/home/jaehyeok95/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/ec67/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/86fe/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/f0b6/hdl/verilog" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/0127/hdl/verilog" \
-"../../../bd/soc_npu/ipshared/001c/src/line_buffer.sv" \
+"../../../bd/soc_npu/ipshared/a7cf/src/line_buffer.sv" \
 
 verilog xil_defaultlib --include "/home/jaehyeok95/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/ec67/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/86fe/hdl" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/f0b6/hdl/verilog" --include "../../../../team_project_npu.gen/sources_1/bd/soc_npu/ipshared/0127/hdl/verilog" \
-"../../../bd/soc_npu/ipshared/001c/hdl/myip_npu_OCR.v" \
+"../../../bd/soc_npu/ipshared/a7cf/hdl/myip_npu_OCR.v" \
 "../../../bd/soc_npu/ip/soc_npu_myip_npu_OCR_0_1/sim/soc_npu_myip_npu_OCR_0_1.v" \
 "../../../bd/soc_npu/ip/soc_npu_axi_smc_1/bd_0/sim/bd_48dd.v" \
 "../../../bd/soc_npu/ip/soc_npu_axi_smc_1/bd_0/ip/ip_0/sim/bd_48dd_one_0.v" \
@@ -69,7 +69,6 @@ verilog xil_defaultlib --include "/home/jaehyeok95/Xilinx/Vivado/2024.2/data/xil
 "../../../bd/soc_npu/ip/soc_npu_axi_smc_1/sim/soc_npu_axi_smc_1.v" \
 "../../../bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_xbar_0/sim/soc_npu_axi_mem_intercon_imp_xbar_0.v" \
 "../../../bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_0/sim/soc_npu_axi_mem_intercon_imp_auto_us_0.v" \
-"../../../bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_1/sim/soc_npu_axi_mem_intercon_imp_auto_us_1.v" \
 "../../../bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_pc_0/sim/soc_npu_axi_mem_intercon_imp_auto_pc_0.v" \
 "../../../bd/soc_npu/sim/soc_npu.v" \
 

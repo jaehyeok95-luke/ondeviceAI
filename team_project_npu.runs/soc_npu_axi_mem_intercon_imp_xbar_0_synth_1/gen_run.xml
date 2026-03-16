@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="soc_npu_axi_mem_intercon_imp_xbar_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1773468188">
-  <File Type="VDS-TIMINGSUMMARY" Name="soc_npu_axi_mem_intercon_imp_xbar_0_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="soc_npu_axi_mem_intercon_imp_xbar_0.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="soc_npu_axi_mem_intercon_imp_xbar_0_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="soc_npu_axi_mem_intercon_imp_xbar_0_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="soc_npu_axi_mem_intercon_imp_xbar_0_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="soc_npu_axi_mem_intercon_imp_xbar_0.vds"/>
   <File Type="REPORTS-TCL" Name="soc_npu_axi_mem_intercon_imp_xbar_0_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="soc_npu_axi_mem_intercon_imp_xbar_0_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="soc_npu_axi_mem_intercon_imp_xbar_0.tcl"/>
+  <File Type="RDS-UTIL" Name="soc_npu_axi_mem_intercon_imp_xbar_0_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="soc_npu_axi_mem_intercon_imp_xbar_0_utilization_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_npu_axi_mem_intercon_imp_xbar_0" RelGenDir="$PGENDIR/soc_npu_axi_mem_intercon_imp_xbar_0">
     <File Path="$PSRCDIR/sources_1/bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_xbar_0/soc_npu_axi_mem_intercon_imp_xbar_0.xci">
       <FileInfo>

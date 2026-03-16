@@ -1,6 +1,354 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 21:34:00 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 20:44:02 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 19:16:49 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 17:38:17 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 16:52:45 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 8) to (Rev. 9)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'soc_npu_myip_npu_OCR_0_1'. These changes may impact your design.
+
+
+-Upgraded port order differs after port 's_axis_tkeep'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 16:47:28 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0 (Rev. 8)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 16:46:43 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 7) to (Rev. 8)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'soc_npu_myip_npu_OCR_0_1'.
+
+
+-Upgrade has added interface 's_axis' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'soc_npu_myip_npu_OCR_0_1'. These changes may impact your design.
+
+
+-Upgrade has added port 's_axis_tkeep'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 16:26:55 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 15:57:19 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 14:55:18 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 14:48:46 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_myip_npu_OCR_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of soc_npu_myip_npu_OCR_0_1 (user.org:user:myip_npu_OCR:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 14:43:08 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_rst_ps7_0_50M_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of soc_npu_rst_ps7_0_50M_1 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 16)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 14:43:08 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_processing_system7_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of soc_npu_processing_system7_0_1 (xilinx.com:ip:processing_system7:5.5 (Rev. 6)) to current project options.
+
+2. Upgrade messages
+-------------------
+
+WARNING: upgrade cannot add parameter PCW_TRACE_INTERNAL_WIDTH with default value 32 : a parameter called PCW_TRACE_INTERNAL_WIDTH already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_USE_AXI_NONSECURE with default value 0 : a parameter called PCW_USE_AXI_NONSECURE already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP0_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP0_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP1_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP1_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP0_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP1_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Mar 15 14:43:08 2026
+| Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'soc_npu_axi_smc_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of soc_npu_axi_smc_1 (xilinx.com:ip:smartconnect:1.0 (Rev. 25)) to current project options.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection and Interface Information
+---------------------------------------
+
+Connection and Interface information can not be compared for deferred elaboration IPs.
+soc_npu_axi_smc_1 may have connection or interface changes.
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 | Date         : Sat Mar 14 15:09:04 2026
 | Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
 | Command      : upgrade_ip

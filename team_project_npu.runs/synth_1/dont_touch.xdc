@@ -28,9 +28,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==soc_npu_axi
 # IP: bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_0/soc_npu_axi_mem_intercon_imp_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==soc_npu_axi_mem_intercon_imp_auto_us_0 || ORIG_REF_NAME==soc_npu_axi_mem_intercon_imp_auto_us_0} -quiet] -quiet
 
-# IP: bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_us_1/soc_npu_axi_mem_intercon_imp_auto_us_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==soc_npu_axi_mem_intercon_imp_auto_us_1 || ORIG_REF_NAME==soc_npu_axi_mem_intercon_imp_auto_us_1} -quiet] -quiet
-
 # IP: bd/soc_npu/ip/soc_npu_axi_mem_intercon_imp_auto_pc_0/soc_npu_axi_mem_intercon_imp_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==soc_npu_axi_mem_intercon_imp_auto_pc_0 || ORIG_REF_NAME==soc_npu_axi_mem_intercon_imp_auto_pc_0} -quiet] -quiet
 

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Sat Mar 14 15:22:12 2026
+| Date         : Sun Mar 15 21:45:41 2026
 | Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_drc -file soc_npu_wrapper_drc_routed.rpt -pb soc_npu_wrapper_drc_routed.pb -rpx soc_npu_wrapper_drc_routed.rpx
 | Design       : soc_npu_wrapper
@@ -24,24 +24,25 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 61
+             Checks found: 72
 +-----------+----------+----------------------------+--------+
 | Rule      | Severity | Description                | Checks |
 +-----------+----------+----------------------------+--------+
-| CHECK-3   | Warning  | Report rule limit reached  | 1      |
-| DPIP-1    | Warning  | Input pipelining           | 11     |
-| DPOP-1    | Warning  | PREG Output pipelining     | 4      |
-| DPOP-2    | Warning  | MREG Output pipelining     | 4      |
+| CHECK-3   | Warning  | Report rule limit reached  | 2      |
+| DPIP-1    | Warning  | Input pipelining           | 9      |
+| DPOP-1    | Warning  | PREG Output pipelining     | 2      |
+| DPOP-2    | Warning  | MREG Output pipelining     | 3      |
 | DPOR-1    | Warning  | Asynchronous load check    | 2      |
 | PDCN-1569 | Warning  | LUT equation term check    | 3      |
 | PDRC-134  | Warning  | SLICE_PairEqSame_B6B5_WARN | 1      |
-| PDRC-136  | Warning  | SLICE_PairEqSame_C6C5_WARN | 4      |
-| PDRC-138  | Warning  | SLICE_PairEqSame_D6D5_WARN | 3      |
+| PDRC-136  | Warning  | SLICE_PairEqSame_C6C5_WARN | 1      |
+| PDRC-138  | Warning  | SLICE_PairEqSame_D6D5_WARN | 2      |
 | PDRC-140  | Warning  | SLICE_PairEqSame_A6A5_WARN | 1      |
-| PDRC-142  | Warning  | SLICE_PairEqSame_B6B5_WARN | 2      |
+| PDRC-142  | Warning  | SLICE_PairEqSame_B6B5_WARN | 1      |
 | PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN | 2      |
 | PDRC-146  | Warning  | SLICE_PairEqSame_D6D5_WARN | 2      |
 | REQP-1839 | Warning  | RAMB36 async control check | 20     |
+| REQP-1840 | Warning  | RAMB18 async control check | 20     |
 | RTSTAT-10 | Warning  | No routable loads          | 1      |
 +-----------+----------+----------------------------+--------+
 
@@ -52,97 +53,77 @@ Report rule limit reached
 REQP-1839 rule limit reached: 20 violations have been found.
 Related violations: <none>
 
+CHECK-3#2 Warning
+Report rule limit reached  
+REQP-1840 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
 DPIP-1#1 Warning
 Input pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset0 input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset0 input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#6 Warning
 Input pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0 input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0 input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0 input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#9 Warning
-Input pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0 input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#10 Warning
-Input pipelining  
 DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr2 input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
-DPIP-1#11 Warning
+DPIP-1#9 Warning
 Input pipelining  
 DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr2 input soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
 PREG Output pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide output soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#2 Warning
-PREG Output pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset0 output soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#3 Warning
-PREG Output pipelining  
 DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out output soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
-DPOP-1#4 Warning
+DPOP-1#2 Warning
 PREG Output pipelining  
 DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0 output soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning
 MREG Output pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide multiplier stage soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg multiplier stage soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#2 Warning
 MREG Output pipelining  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset0 multiplier stage soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#3 Warning
-MREG Output pipelining  
 DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out multiplier stage soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/p_1_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
-DPOP-2#4 Warning
+DPOP-2#3 Warning
 MREG Output pipelining  
 DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0 multiplier stage soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
@@ -159,212 +140,287 @@ Related violations: <none>
 
 PDCN-1569#1 Warning
 LUT equation term check  
-Used physical LUT pin 'A1' of cell soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A2)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A3' of cell soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A1)+((~A1)*(~A5)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#2 Warning
 LUT equation term check  
-Used physical LUT pin 'A2' of cell soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A5' of cell soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A2)+((~A2)*(~A6)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#3 Warning
 LUT equation term check  
-Used physical LUT pin 'A4' of cell soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A1)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A6' of cell soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDRC-134#1 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X48Y98 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X43Y79 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X35Y75 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-136#2 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X37Y99 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-136#3 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X48Y98 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-136#4 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X57Y101 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X43Y79 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X35Y78 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X35Y83 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#2 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X37Y82 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-138#3 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X37Y99 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X41Y74 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-140#1 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X50Y84 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X58Y84 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-142#1 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X42Y79 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#2 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X46Y97 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X46Y78 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X42Y79 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X32Y76 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#2 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X58Y100 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X34Y67 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X36Y100 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X32Y76 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#2 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X42Y79 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X34Y67 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 REQP-1839#1 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/load_we_reg_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#2 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/load_wr_addr_reg_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#3 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_dst_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#4 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fc/done_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#5 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#6 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#7 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#8 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#9 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#10 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#11 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#12 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#13 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#14 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#15 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#16 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#17 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#18 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#19 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#20 Warning
 RAMB36 async control check  
-The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_a/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_en_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0 has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/mem_reg_0_0/ADDRARDADDR[14] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c1/ADDRARDADDR[14]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/pool_wr_offset_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#9 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#10 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#11 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#12 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#13 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#14 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#15 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#16 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#17 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#18 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#19 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#20 Warning
+RAMB18 async control check  
+The RAMB18E1 soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg has an input control pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/mem_reg/ADDRARDADDR[13] (net: soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_fmap_c4/ADDRARDADDR[10]) which is driven by a register (soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/u_pool/wr_addr_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-48 net(s) have no routable loads. The problem bus(es) and/or net(s) are soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+49 net(s) have no routable loads. The problem bus(es) and/or net(s) are soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
 soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i,
 soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
 soc_npu_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/mi_handler_m_sc_areset_pipe,
 soc_npu_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/mi_handler_m_sc_areset_pipe,
-soc_npu_i/axi_smc/inst/m00_nodes/m00_b_node/inst/mi_handler_m_sc_areset_pipe,
 soc_npu_i/axi_smc/inst/m00_nodes/m00_r_node/inst/mi_handler_m_sc_areset_pipe,
-soc_npu_i/axi_smc/inst/m00_nodes/m00_w_node/inst/mi_handler_m_sc_areset_pipe,
-soc_npu_i/axi_smc/inst/m01_nodes/m01_ar_node/inst/mi_handler_m_sc_areset_pipe,
 soc_npu_i/axi_smc/inst/m01_nodes/m01_aw_node/inst/mi_handler_m_sc_areset_pipe,
-soc_npu_i/axi_smc/inst/m01_nodes/m01_b_node/inst/mi_handler_m_sc_areset_pipe,
 soc_npu_i/axi_smc/inst/m01_nodes/m01_r_node/inst/mi_handler_m_sc_areset_pipe,
 soc_npu_i/axi_smc/inst/m01_nodes/m01_w_node/inst/mi_handler_m_sc_areset_pipe,
 soc_npu_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/mi_handler_m_sc_areset_pipe,
-soc_npu_i/axi_smc/inst/s00_nodes/s00_r_node/inst/mi_handler_m_sc_areset_pipe
- (the first 15 of 36 listed nets/buses).
+soc_npu_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/mi_handler_m_sc_areset_pipe,
+soc_npu_i/axi_smc/inst/s00_nodes/s00_b_node/inst/mi_handler_m_sc_areset_pipe,
+soc_npu_i/axi_smc/inst/s00_nodes/s00_r_node/inst/mi_handler_m_sc_areset_pipe,
+soc_npu_i/axi_smc/inst/s00_nodes/s00_w_node/inst/mi_handler_m_sc_areset_pipe
+ (the first 15 of 37 listed nets/buses).
 Related violations: <none>
 
 

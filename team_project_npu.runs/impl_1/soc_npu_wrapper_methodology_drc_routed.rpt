@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Sat Mar 14 15:22:15 2026
+| Date         : Sun Mar 15 21:45:43 2026
 | Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_methodology -file soc_npu_wrapper_methodology_drc_routed.rpt -pb soc_npu_wrapper_methodology_drc_routed.pb -rpx soc_npu_wrapper_methodology_drc_routed.rpx
 | Design       : soc_npu_wrapper
@@ -23,40 +23,39 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 68
-+----------+----------+-------------------------------------------------+--------+
-| Rule     | Severity | Description                                     | Checks |
-+----------+----------+-------------------------------------------------+--------+
-| DPIR-1   | Warning  | Asynchronous driver check                       | 33     |
-| LUTAR-1  | Warning  | LUT drives async reset alert                    | 3      |
-| PDRC-190 | Warning  | Suboptimally placed synchronized register chain | 32     |
-+----------+----------+-------------------------------------------------+--------+
+             Checks found: 36
++---------+----------+------------------------------+--------+
+| Rule    | Severity | Description                  | Checks |
++---------+----------+------------------------------+--------+
+| DPIR-1  | Warning  | Asynchronous driver check    | 33     |
+| LUTAR-1 | Warning  | LUT drives async reset alert | 3      |
++---------+----------+------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
 DPIR-1#1 Warning
 Asynchronous driver check  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
 Related violations: <none>
 
 DPIR-1#2 Warning
 Asynchronous driver check  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
 Related violations: <none>
 
 DPIR-1#3 Warning
 Asynchronous driver check  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
 Related violations: <none>
 
 DPIR-1#4 Warning
 Asynchronous driver check  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
 Related violations: <none>
 
 DPIR-1#5 Warning
 Asynchronous driver check  
-DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_wide/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+DSP soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg input pin soc_npu_i/myip_npu_OCR_0/inst/u_npu_core/patch_ch_offset_r_reg/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
 Related violations: <none>
 
 DPIR-1#6 Warning
@@ -257,166 +256,6 @@ soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_ins
 soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[3]/CLR,
 soc_npu_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[4]/CLR
  (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-PDRC-190#1 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[0] in site SLICE_X34Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#2 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[10] in site SLICE_X28Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[10].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#3 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[11] in site SLICE_X31Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[11].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#4 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[12] in site SLICE_X33Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[12].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#5 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[13] in site SLICE_X31Y78 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[13].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#6 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[14] in site SLICE_X30Y78 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[14].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#7 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[15] in site SLICE_X32Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[15].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#8 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[16] in site SLICE_X29Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[16].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#9 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[17] in site SLICE_X31Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[17].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#10 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[18] in site SLICE_X30Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[18].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#11 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[19] in site SLICE_X32Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[19].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#12 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[1] in site SLICE_X34Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#13 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[20] in site SLICE_X33Y78 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[20].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#14 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[21] in site SLICE_X33Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[21].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#15 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[22] in site SLICE_X34Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[22].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#16 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[23] in site SLICE_X32Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[23].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#17 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[24] in site SLICE_X37Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[24].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#18 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[25] in site SLICE_X38Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[25].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#19 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[26] in site SLICE_X39Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[26].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#20 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[27] in site SLICE_X39Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[27].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#21 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[28] in site SLICE_X39Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[28].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#22 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[29] in site SLICE_X38Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[29].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#23 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[2] in site SLICE_X35Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[2].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#24 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[30] in site SLICE_X36Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[30].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#25 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[31] in site SLICE_X37Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[31].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#26 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[3] in site SLICE_X35Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[3].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#27 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[4] in site SLICE_X32Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[4].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#28 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[5] in site SLICE_X33Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[5].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#29 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[6] in site SLICE_X40Y78 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[6].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#30 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[7] in site SLICE_X35Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[7].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#31 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[8] in site SLICE_X28Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[8].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#32 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[9] in site SLICE_X30Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell soc_npu_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[9].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to is not placed in the same (SLICE) site.
 Related violations: <none>
 
 

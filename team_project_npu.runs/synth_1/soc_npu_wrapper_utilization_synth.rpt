@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Sat Mar 14 15:21:00 2026
+| Date         : Sun Mar 15 21:36:31 2026
 | Host         : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_utilization -file soc_npu_wrapper_utilization_synth.rpt -pb soc_npu_wrapper_utilization_synth.pb
 | Design       : soc_npu_wrapper
@@ -162,7 +162,6 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | soc_npu_myip_npu_OCR_0_1               |    1 |
 | soc_npu_axi_smc_1                      |    1 |
 | soc_npu_axi_mem_intercon_imp_xbar_0    |    1 |
-| soc_npu_axi_mem_intercon_imp_auto_us_1 |    1 |
 | soc_npu_axi_mem_intercon_imp_auto_us_0 |    1 |
 | soc_npu_axi_mem_intercon_imp_auto_pc_0 |    1 |
 | soc_npu_axi_dma_0_1                    |    1 |

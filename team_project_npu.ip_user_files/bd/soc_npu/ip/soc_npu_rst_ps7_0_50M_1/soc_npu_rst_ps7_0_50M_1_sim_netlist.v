@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Sat Mar 14 15:04:19 2026
+// Date        : Sun Mar 15 14:44:23 2026
 // Host        : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_rst_ps7_0_50M_1/soc_npu_rst_ps7_0_50M_1_sim_netlist.v

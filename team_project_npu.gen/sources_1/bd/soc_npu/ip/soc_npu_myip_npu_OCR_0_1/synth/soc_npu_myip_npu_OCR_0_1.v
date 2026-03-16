@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:myip_npu_OCR:1.0
-// IP Revision: 3
+// IP Revision: 13
 
 (* X_CORE_INFO = "myip_npu_OCR,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "soc_npu_myip_npu_OCR_0_1,myip_npu_OCR,{}" *)
@@ -60,6 +60,7 @@ module soc_npu_myip_npu_OCR_0_1 (
   s_axis_tready,
   s_axis_tdata,
   s_axis_tlast,
+  s_axis_tkeep,
   s00_axi_aclk,
   s00_axi_aresetn,
   s00_axi_awaddr,
@@ -85,16 +86,24 @@ module soc_npu_myip_npu_OCR_0_1 (
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_RESET s_axis_aresetn, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN soc_npu_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_RESET s_axis_aresetn, ASSOCIATED_BUSIF s_axis, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN soc_npu_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
 input wire s_axis_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s_axis_aresetn RST" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 input wire s_axis_aresetn;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TVALID" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN soc_npu_processing_system7_0_1_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 input wire s_axis_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TREADY" *)
 output wire s_axis_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TDATA" *)
 input wire [7 : 0] s_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TLAST" *)
 input wire s_axis_tlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TKEEP" *)
+input wire [0 : 0] s_axis_tkeep;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN soc_npu_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
@@ -155,6 +164,7 @@ input wire s00_axi_rready;
     .s_axis_tready(s_axis_tready),
     .s_axis_tdata(s_axis_tdata),
     .s_axis_tlast(s_axis_tlast),
+    .s_axis_tkeep(s_axis_tkeep),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),
     .s00_axi_awaddr(s00_axi_awaddr),
