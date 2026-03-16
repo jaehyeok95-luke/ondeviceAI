@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1773578146" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/npu_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1773655209" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/npu_top.dcp">
   <File Type="RDS-DCP" Name="soc_npu_wrapper.dcp"/>
   <File Type="RDS-RDS" Name="soc_npu_wrapper.vds"/>
   <File Type="REPORTS-TCL" Name="soc_npu_wrapper_reports.tcl"/>

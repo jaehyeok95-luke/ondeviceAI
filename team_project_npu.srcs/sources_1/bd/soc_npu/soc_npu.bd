@@ -7,8 +7,7 @@
       "name": "soc_npu",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2",
-      "validated": "true"
+      "tool_version": "2024.2"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -1352,7 +1351,7 @@
       },
       "myip_npu_OCR_0": {
         "vlnv": "user.org:user:myip_npu_OCR:1.0",
-        "ip_revision": "13",
+        "ip_revision": "26",
         "xci_name": "soc_npu_myip_npu_OCR_0_1",
         "xci_path": "ip/soc_npu_myip_npu_OCR_0_1/soc_npu_myip_npu_OCR_0_1.xci",
         "inst_hier_path": "myip_npu_OCR_0"
@@ -2014,7 +2013,6 @@
           "processing_system7_0/M_AXI_GP0_ACLK",
           "processing_system7_0/S_AXI_HP0_ACLK",
           "rst_ps7_0_50M/slowest_sync_clk",
-          "myip_npu_OCR_0/s_axis_aclk",
           "myip_npu_OCR_0/s00_axi_aclk"
         ]
       },
@@ -2033,7 +2031,6 @@
           "axi_mem_intercon/ARESETN",
           "axi_mem_intercon/S01_ARESETN",
           "axi_smc/aresetn",
-          "myip_npu_OCR_0/s_axis_aresetn",
           "myip_npu_OCR_0/s00_axi_aresetn"
         ]
       }

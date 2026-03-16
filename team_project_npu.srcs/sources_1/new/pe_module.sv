@@ -1,0 +1,205 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 03/16/2026 11:03:35 PM
+// Design Name: 
+// Module Name: pe_module
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module pe (
+    input  wire        clk,
+    input  wire        rst_n,
+    input  wire        valid,      // 입력 유효 신호
+    input  wire signed [7:0] a,    // activation (input pixel)
+    input  wire signed [7:0] b,    // weight
+    output reg  signed [15:0] p,   // product
+    output reg         p_valid     // 출력 유효 신호
+);
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            p       <= 16'sd0;
+            p_valid <= 1'b0;
+        end else begin
+            p       <= a * b;
+            p_valid <= valid;
+        end
+    end
+
+endmodule
+
+module pe_array #(
+    parameter P = 8
+)(
+    input  wire        clk,
+    input  wire        rst_n,
+    input  wire        valid,
+
+    input  wire signed [7:0] patch [0:8],
+    input  wire [71:0] weight_packed [0:P-1],
+
+    output reg  signed [19:0] psum [0:P-1],    // 20bit: 오버플로우 방지
+    output reg         psum_valid
+);
+
+    // ── weight 언패킹 ──
+    wire signed [7:0] w [0:P-1][0:8];
+    genvar ch, k;
+    generate
+        for (ch = 0; ch < P; ch = ch + 1) begin : gen_unpack
+            for (k = 0; k < 9; k = k + 1) begin : gen_byte
+                assign w[ch][k] = $signed(weight_packed[ch][k*8 +: 8]);
+            end
+        end
+    endgenerate
+
+    // ── PE 인스턴스 ──
+    wire signed [15:0] products [0:P-1][0:8];
+    wire               pe_valids [0:P-1][0:8];
+
+    generate
+        for (ch = 0; ch < P; ch = ch + 1) begin : gen_ch
+            for (k = 0; k < 9; k = k + 1) begin : gen_k
+                pe u_pe (
+                    .clk(clk),
+                    .rst_n(rst_n),
+                    .valid(valid),
+                    .a(patch[k]),
+                    .b(w[ch][k]),
+                    .p(products[ch][k]),
+                    .p_valid(pe_valids[ch][k])
+                );
+            end
+        end
+    endgenerate
+
+    // ── Adder tree: 20bit 출력 ──
+    // 단계적 합산으로 비트 확장 명시
+    integer i;
+    reg signed [16:0] sum_01 [0:P-1];  // 2개 합: 17bit
+    reg signed [16:0] sum_23 [0:P-1];
+    reg signed [16:0] sum_45 [0:P-1];
+    reg signed [16:0] sum_67 [0:P-1];
+    reg signed [17:0] sum_0123 [0:P-1]; // 4개 합: 18bit
+    reg signed [17:0] sum_4567 [0:P-1];
+    reg signed [18:0] sum_01234567 [0:P-1]; // 8개 합: 19bit
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            for (i = 0; i < P; i = i + 1)
+                psum[i] <= 20'sd0;
+            psum_valid <= 1'b0;
+        end else begin
+            psum_valid <= pe_valids[0][0];
+            for (i = 0; i < P; i = i + 1) begin
+                // Stage 1: 2개씩 묶기 (16→17bit)
+                sum_01[i] = $signed({products[i][0][15], products[i][0]}) +
+                            $signed({products[i][1][15], products[i][1]});
+                sum_23[i] = $signed({products[i][2][15], products[i][2]}) +
+                            $signed({products[i][3][15], products[i][3]});
+                sum_45[i] = $signed({products[i][4][15], products[i][4]}) +
+                            $signed({products[i][5][15], products[i][5]});
+                sum_67[i] = $signed({products[i][6][15], products[i][6]}) +
+                            $signed({products[i][7][15], products[i][7]});
+
+                // Stage 2: 4개씩 묶기 (17→18bit)
+                sum_0123[i] = $signed({sum_01[i][16], sum_01[i]}) +
+                              $signed({sum_23[i][16], sum_23[i]});
+                sum_4567[i] = $signed({sum_45[i][16], sum_45[i]}) +
+                              $signed({sum_67[i][16], sum_67[i]});
+
+                // Stage 3: 8개 합 (18→19bit)
+                sum_01234567[i] = $signed({sum_0123[i][17], sum_0123[i]}) +
+                                  $signed({sum_4567[i][17], sum_4567[i]});
+
+                // Stage 4: +product[8] (19→20bit)
+                psum[i] <= $signed({sum_01234567[i][18], sum_01234567[i]}) +
+                           $signed({{4{products[i][8][15]}}, products[i][8]});
+            end
+        end
+    end
+
+endmodule
+
+//module acc_relu_quant #(
+//    parameter P = 8
+//)(
+//    input  wire        clk,
+//    input  wire        rst_n,
+
+//    input  wire        bias_load,
+//    input  wire        acc_en,
+//    input  wire        out_en,
+//    input  wire        relu_en,
+
+//    input  wire signed [19:0] psum [0:P-1],
+//    input  wire signed [7:0]  bias [0:P-1],
+
+//    output reg  signed [7:0]  result [0:P-1],
+//    output reg         result_valid
+//);
+
+//    reg signed [31:0] acc [0:P-1];
+//    reg signed [31:0] shifted;
+
+//    integer i;
+//    always @(posedge clk or negedge rst_n) begin
+//        if (!rst_n) begin
+//            for (i = 0; i < P; i = i + 1) begin
+//                acc[i]    <= 32'sd0;
+//                result[i] <= 8'sd0;
+//            end
+//            result_valid <= 1'b0;
+//        end else begin
+//            result_valid <= 1'b0;
+
+//            // ── 우선순위: bias_load > acc_en > out_en ──
+//            // FSM이 동시에 활성화하지 않도록 보장하지만 방어적 설계
+//            if (bias_load) begin
+//                for (i = 0; i < P; i = i + 1)
+//                    acc[i] <= $signed({{24{bias[i][7]}}, bias[i]}) <<< 7;
+
+//            end else if (acc_en) begin
+//                for (i = 0; i < P; i = i + 1)
+//                    acc[i] <= acc[i] + $signed({{12{psum[i][19]}}, psum[i]});
+
+//            end else if (out_en) begin
+//                result_valid <= 1'b1;
+//                for (i = 0; i < P; i = i + 1) begin
+//                    shifted = acc[i] >>> 7;
+
+//                    if (relu_en) begin
+//                        if (shifted < 32'sd0)
+//                            result[i] <= 8'sd0;
+//                        else if (shifted > 32'sd127)
+//                            result[i] <= 8'sd127;
+//                        else
+//                            result[i] <= shifted[7:0];
+//                    end else begin
+//                        if (shifted > 32'sd127)
+//                            result[i] <= 8'sd127;
+//                        else if (shifted < -32'sd128)
+//                            result[i] <= -8'sd128;
+//                        else
+//                            result[i] <= shifted[7:0];
+//                    end
+//                end
+//            end
+//        end
+//    end
+
+//endmodule

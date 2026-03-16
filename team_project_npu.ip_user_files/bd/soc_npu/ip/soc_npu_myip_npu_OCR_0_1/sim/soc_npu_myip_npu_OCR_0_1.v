@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:myip_npu_OCR:1.0
-// IP Revision: 13
+// IP Revision: 25
 
 `timescale 1ns/1ps
 
