@@ -71,8 +71,6 @@ set_property parent.project_path /home/jaehyeok95/team_project_npu/team_project_
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {/home/jaehyeok95/.Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
-set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
 set_property ip_repo_paths /home/jaehyeok95/ip_repo/myip_npu_OCR_1_0 [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/jaehyeok95/team_project_npu/team_project_npu.cache/ip [current_project]

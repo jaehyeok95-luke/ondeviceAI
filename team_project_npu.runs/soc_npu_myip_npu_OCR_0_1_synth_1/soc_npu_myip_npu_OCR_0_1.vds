@@ -1,0 +1,1609 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Mar 18 12:45:41 2026
+# Process ID         : 38415
+# Current directory  : /home/jaehyeok95/team_project_npu/team_project_npu.runs/soc_npu_myip_npu_OCR_0_1_synth_1
+# Command line       : vivado -log soc_npu_myip_npu_OCR_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source soc_npu_myip_npu_OCR_0_1.tcl
+# Log file           : /home/jaehyeok95/team_project_npu/team_project_npu.runs/soc_npu_myip_npu_OCR_0_1_synth_1/soc_npu_myip_npu_OCR_0_1.vds
+# Journal file       : /home/jaehyeok95/team_project_npu/team_project_npu.runs/soc_npu_myip_npu_OCR_0_1_synth_1/vivado.jou
+# Running On         : jaehyeok95-AORUS-5-MB
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10200H CPU @ 2.40GHz
+# CPU Frequency      : 3503.262 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8006 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 12301 MB
+# Available Virtual  : 2605 MB
+#-----------------------------------------------------------
+Sourcing tcl script '/home/jaehyeok95/.Xilinx/Vivado/Vivado_init.tcl'
+source soc_npu_myip_npu_OCR_0_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jaehyeok95/ip_repo/myip_npu_OCR_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/jaehyeok95/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: soc_npu_myip_npu_OCR_0_1
+Command: synth_design -top soc_npu_myip_npu_OCR_0_1 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 38549
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1937.570 ; gain = 420.797 ; free physical = 173 ; free virtual = 1568
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'soc_npu_myip_npu_OCR_0_1' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_myip_npu_OCR_0_1/synth/soc_npu_myip_npu_OCR_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'myip_npu_OCR' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR.v:3]
+INFO: [Synth 8-6157] synthesizing module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:116]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:216]
+INFO: [Synth 8-6155] done synthesizing module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:3]
+INFO: [Synth 8-6157] synthesizing module 'weight_bram_a' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:141]
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram_a' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:141]
+INFO: [Synth 8-6157] synthesizing module 'weight_bram_b' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:163]
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram_b' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:163]
+INFO: [Synth 8-6157] synthesizing module 'fmap_bram' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:300]
+INFO: [Synth 8-6155] done synthesizing module 'fmap_bram' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:300]
+INFO: [Synth 8-6157] synthesizing module 'npu_control' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:145]
+INFO: [Synth 8-6155] done synthesizing module 'npu_control' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'weight_preload' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:185]
+INFO: [Synth 8-6155] done synthesizing module 'weight_preload' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:185]
+INFO: [Synth 8-6157] synthesizing module 'line_buffer' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'line_buffer' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'line_loader' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/fsm.sv:540]
+INFO: [Synth 8-6155] done synthesizing module 'line_loader' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/fsm.sv:540]
+INFO: [Synth 8-6157] synthesizing module 'pe_array' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:45]
+INFO: [Synth 8-6157] synthesizing module 'pe' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'pe' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'pe_array' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:45]
+INFO: [Synth 8-6157] synthesizing module 'maxpool2x2' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'maxpool2x2' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'conv_engine' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/fsm.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'psum_bram_bank' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:558]
+INFO: [Synth 8-6155] done synthesizing module 'psum_bram_bank' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:558]
+INFO: [Synth 8-6155] done synthesizing module 'conv_engine' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/fsm.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'fc_unit' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:331]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:429]
+INFO: [Synth 8-6155] done synthesizing module 'fc_unit' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:331]
+WARNING: [Synth 8-7071] port 'busy' of module 'fc_unit' is unconnected for instance 'u_fc_unit' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR.v:537]
+WARNING: [Synth 8-7023] instance 'u_fc_unit' of module 'fc_unit' has 19 connections declared, but only 18 given [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR.v:537]
+INFO: [Synth 8-6157] synthesizing module 'argmax' [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:120]
+INFO: [Synth 8-6155] done synthesizing module 'argmax' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:120]
+INFO: [Synth 8-6155] done synthesizing module 'myip_npu_OCR' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'soc_npu_myip_npu_OCR_0_1' (0#1) [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ip/soc_npu_myip_npu_OCR_0_1/synth/soc_npu_myip_npu_OCR_0_1.v:53]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:170]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:172]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg4_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:173]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg5_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/hdl/myip_npu_OCR_slave_lite_v1_0_S00_AXI.v:174]
+WARNING: [Synth 8-7137] Register conv_cfg_ci_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:122]
+WARNING: [Synth 8-7137] Register conv_cfg_co_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:123]
+WARNING: [Synth 8-7137] Register conv_cfg_w_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:124]
+WARNING: [Synth 8-7137] Register conv_cfg_h_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:125]
+WARNING: [Synth 8-7137] Register conv_cfg_weight_bank_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:126]
+WARNING: [Synth 8-7137] Register conv_fmap_rd_base_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:127]
+WARNING: [Synth 8-7137] Register fc_cfg_in_len_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:154]
+WARNING: [Synth 8-7137] Register fc_cfg_out_len_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:154]
+WARNING: [Synth 8-7137] Register fc_cfg_relu_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:154]
+WARNING: [Synth 8-7137] Register fc_w_base_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:155]
+WARNING: [Synth 8-7137] Register fc_f_rd_base_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:155]
+WARNING: [Synth 8-7137] Register fc_f_wr_base_reg in module npu_control has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/npu_top.v:155]
+WARNING: [Synth 8-7137] Register byte_buf_reg in module weight_preload has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'byte_buf_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "byte_buf_reg" dissolved into registers
+WARNING: [Synth 8-6014] Unused sequential element sum_01_reg[0] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:110]
+WARNING: [Synth 8-6014] Unused sequential element sum_01_reg[1] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:110]
+WARNING: [Synth 8-6014] Unused sequential element sum_01_reg[2] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:110]
+WARNING: [Synth 8-6014] Unused sequential element sum_01_reg[3] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:110]
+WARNING: [Synth 8-6014] Unused sequential element sum_01_reg[4] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:110]
+WARNING: [Synth 8-6014] Unused sequential element sum_01_reg[5] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:110]
+WARNING: [Synth 8-6014] Unused sequential element sum_01_reg[6] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:110]
+WARNING: [Synth 8-6014] Unused sequential element sum_01_reg[7] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:110]
+WARNING: [Synth 8-6014] Unused sequential element sum_23_reg[0] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:112]
+WARNING: [Synth 8-6014] Unused sequential element sum_23_reg[1] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:112]
+WARNING: [Synth 8-6014] Unused sequential element sum_23_reg[2] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:112]
+WARNING: [Synth 8-6014] Unused sequential element sum_23_reg[3] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:112]
+WARNING: [Synth 8-6014] Unused sequential element sum_23_reg[4] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:112]
+WARNING: [Synth 8-6014] Unused sequential element sum_23_reg[5] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:112]
+WARNING: [Synth 8-6014] Unused sequential element sum_23_reg[6] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:112]
+WARNING: [Synth 8-6014] Unused sequential element sum_23_reg[7] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:112]
+WARNING: [Synth 8-6014] Unused sequential element sum_45_reg[0] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element sum_45_reg[1] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element sum_45_reg[2] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element sum_45_reg[3] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element sum_45_reg[4] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element sum_45_reg[5] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element sum_45_reg[6] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element sum_45_reg[7] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element sum_67_reg[0] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element sum_67_reg[1] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element sum_67_reg[2] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element sum_67_reg[3] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element sum_67_reg[4] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element sum_67_reg[5] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element sum_67_reg[6] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element sum_67_reg[7] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element sum_0123_reg[0] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:119]
+WARNING: [Synth 8-6014] Unused sequential element sum_0123_reg[1] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:119]
+WARNING: [Synth 8-6014] Unused sequential element sum_0123_reg[2] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:119]
+WARNING: [Synth 8-6014] Unused sequential element sum_0123_reg[3] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:119]
+WARNING: [Synth 8-6014] Unused sequential element sum_0123_reg[4] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:119]
+WARNING: [Synth 8-6014] Unused sequential element sum_0123_reg[5] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:119]
+WARNING: [Synth 8-6014] Unused sequential element sum_0123_reg[6] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:119]
+WARNING: [Synth 8-6014] Unused sequential element sum_0123_reg[7] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:119]
+WARNING: [Synth 8-6014] Unused sequential element sum_4567_reg[0] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element sum_4567_reg[1] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element sum_4567_reg[2] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element sum_4567_reg[3] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element sum_4567_reg[4] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element sum_4567_reg[5] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element sum_4567_reg[6] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element sum_4567_reg[7] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element sum_01234567_reg[0] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element sum_01234567_reg[1] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element sum_01234567_reg[2] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element sum_01234567_reg[3] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element sum_01234567_reg[4] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element sum_01234567_reg[5] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element sum_01234567_reg[6] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element sum_01234567_reg[7] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element sum_all9_reg[0] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:127]
+WARNING: [Synth 8-6014] Unused sequential element sum_all9_reg[1] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:127]
+WARNING: [Synth 8-6014] Unused sequential element sum_all9_reg[2] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:127]
+WARNING: [Synth 8-6014] Unused sequential element sum_all9_reg[3] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:127]
+WARNING: [Synth 8-6014] Unused sequential element sum_all9_reg[4] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:127]
+WARNING: [Synth 8-6014] Unused sequential element sum_all9_reg[5] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:127]
+WARNING: [Synth 8-6014] Unused sequential element sum_all9_reg[6] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:127]
+WARNING: [Synth 8-6014] Unused sequential element sum_all9_reg[7] was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/pe_module.sv:127]
+WARNING: [Synth 8-7137] Register row_max_reg[0][0] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][1] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][2] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][3] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][4] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][5] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][6] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][7] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][8] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][9] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][10] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][11] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][12] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][13] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][14] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][15] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][16] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][17] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][18] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][19] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][20] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][21] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][22] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][23] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][24] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][25] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][26] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][27] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][28] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][29] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][30] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[0][31] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][0] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][1] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][2] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][3] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][4] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][5] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][6] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][7] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][8] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][9] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][10] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][11] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][12] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][13] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][14] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][15] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][16] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][17] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][18] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][19] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][20] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][21] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][22] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][23] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][24] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][25] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][26] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][27] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][28] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][29] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][30] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[1][31] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][0] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][1] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][2] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][3] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][4] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][5] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][6] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][7] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][8] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][9] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][10] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][11] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][12] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][13] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][14] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][15] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][16] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][17] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][18] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][19] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][20] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][21] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+WARNING: [Synth 8-7137] Register row_max_reg[2][22] in module maxpool2x2 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/max_module.sv:81]
+INFO: [Common 17-14] Message 'Synth 8-7137' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element shifted_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/fsm.sv:250]
+WARNING: [Synth 8-6014] Unused sequential element shifted_reg was removed.  [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/buffer_module.sv:520]
+WARNING: [Synth 8-7129] Port rd_addr[6] in module psum_bram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[6] in module psum_bram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module myip_npu_OCR_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module myip_npu_OCR_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module myip_npu_OCR_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module myip_npu_OCR_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module myip_npu_OCR_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module myip_npu_OCR_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep in module myip_npu_OCR is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2259.312 ; gain = 742.539 ; free physical = 229 ; free virtual = 1393
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2259.312 ; gain = 742.539 ; free physical = 180 ; free virtual = 1390
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2259.312 ; gain = 742.539 ; free physical = 180 ; free virtual = 1390
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2259.312 ; gain = 0.000 ; free physical = 137 ; free virtual = 1384
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2379.156 ; gain = 0.000 ; free physical = 256 ; free virtual = 1502
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.47 . Memory (MB): peak = 2379.156 ; gain = 0.000 ; free physical = 216 ; free virtual = 1489
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2379.156 ; gain = 862.383 ; free physical = 214 ; free virtual = 1507
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2387.160 ; gain = 870.387 ; free physical = 213 ; free virtual = 1508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2387.160 ; gain = 870.387 ; free physical = 212 ; free virtual = 1508
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'npu_control'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'weight_preload'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'line_loader'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_engine'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fc_unit'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'argmax'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    Idle |                               00 |                               00
+                   Waddr |                               01 |                               10
+                   Wdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_write_reg' using encoding 'sequential' in module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    Idle |                               00 |                               00
+                   Raddr |                               01 |                               10
+                   Rdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using encoding 'sequential' in module 'myip_npu_OCR_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  M_IDLE |                              001 |                               00
+                   M_RUN |                              010 |                               01
+                  M_DONE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'npu_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                             0001 |                               00
+                 S_PRIME |                             0010 |                               01
+                  S_READ |                             0100 |                               10
+                  S_PACK |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'weight_preload'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  L_IDLE |                              001 |                               00
+                  L_PIPE |                              010 |                               01
+                  L_LOAD |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'line_loader'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  C_IDLE |                              000 |                              000
+                  C_LOAD |                              001 |                              001
+                 C_PIXEL |                              010 |                              010
+               C_NEXT_CI |                              011 |                              011
+                 C_FLUSH |                              100 |                              100
+              C_NEXT_ROW |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_engine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                              000 |                              000
+             S_LOAD_PIPE |                              001 |                              001
+                  S_LOAD |                              010 |                              010
+                  S_BIAS |                              011 |                              011
+             S_BIAS_WAIT |                              100 |                              100
+                   S_MAC |                              101 |                              101
+                S_OUTPUT |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'fc_unit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  A_IDLE |                              001 |                               00
+                  A_PIPE |                              010 |                               01
+                   A_CMP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'argmax'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2387.160 ; gain = 870.387 ; free physical = 191 ; free virtual = 1483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 8     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   15 Bit       Adders := 5     
+	   3 Input   15 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    7 Bit       Adders := 11    
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 3     
++---Registers : 
+	               72 Bit    Registers := 8     
+	               32 Bit    Registers := 37    
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 94    
+	               15 Bit    Registers := 12    
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 1155  
+	                7 Bit    Registers := 20    
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 114   
++---RAMs : 
+	            1406K Bit	(45000 X 32 bit)          RAMs := 1     
+	            1281K Bit	(41000 X 32 bit)          RAMs := 1     
+	             256K Bit	(32768 X 8 bit)          RAMs := 2     
+	               2K Bit	(64 X 32 bit)          RAMs := 8     
++---Muxes : 
+	   7 Input   32 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 11    
+	   2 Input   24 Bit        Muxes := 3     
+	   4 Input   24 Bit        Muxes := 1     
+	   7 Input   16 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 2     
+	   6 Input   16 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 1     
+	  11 Input   16 Bit        Muxes := 1     
+	   7 Input   15 Bit        Muxes := 1     
+	   6 Input   15 Bit        Muxes := 1     
+	   3 Input   15 Bit        Muxes := 2     
+	  11 Input   15 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 7     
+	   4 Input   15 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	   7 Input   10 Bit        Muxes := 2     
+	  11 Input   10 Bit        Muxes := 1     
+	   7 Input    9 Bit        Muxes := 1     
+	  11 Input    9 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 232   
+	   2 Input    8 Bit        Muxes := 143   
+	   6 Input    8 Bit        Muxes := 4     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 6     
+	   6 Input    7 Bit        Muxes := 5     
+	   3 Input    7 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   4 Input    5 Bit        Muxes := 1     
+	   7 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	  11 Input    4 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 7     
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 8     
+	   3 Input    2 Bit        Muxes := 5     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1664  
+	   7 Input    1 Bit        Muxes := 529   
+	   6 Input    1 Bit        Muxes := 18    
+	   3 Input    1 Bit        Muxes := 41    
+	   4 Input    1 Bit        Muxes := 30    
+	   5 Input    1 Bit        Muxes := 66    
+	  11 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'psum_rd_addr_reg' and it is trimmed from '7' to '6' bits. [/home/jaehyeok95/team_project_npu/team_project_npu.gen/sources_1/bd/soc_npu/ipshared/dd70/src/fsm.sv:97]
+DSP Report: Generating DSP line_load_base_addr2, operation Mode is: A*B.
+DSP Report: operator line_load_base_addr2 is absorbed into DSP line_load_base_addr2.
+DSP Report: Generating DSP fmap_wr_addr2, operation Mode is: A*B.
+DSP Report: operator fmap_wr_addr2 is absorbed into DSP fmap_wr_addr2.
+DSP Report: Generating DSP fmap_wr_addr0, operation Mode is: PCIN+(D+A)*B.
+DSP Report: operator fmap_wr_addr0 is absorbed into DSP fmap_wr_addr0.
+DSP Report: operator fmap_wr_addr2 is absorbed into DSP fmap_wr_addr0.
+DSP Report: operator fmap_wr_addr3 is absorbed into DSP fmap_wr_addr0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p0, operation Mode is: A*B.
+DSP Report: operator p0 is absorbed into DSP p0.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_7_out, operation Mode is: C+A:B.
+DSP Report: operator p_7_out is absorbed into DSP p_7_out.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_6_out, operation Mode is: C+A:B.
+DSP Report: operator p_6_out is absorbed into DSP p_6_out.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_5_out, operation Mode is: C+A:B.
+DSP Report: operator p_5_out is absorbed into DSP p_5_out.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_4_out, operation Mode is: C+A:B.
+DSP Report: operator p_4_out is absorbed into DSP p_4_out.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_3_out, operation Mode is: C+A:B.
+DSP Report: operator p_3_out is absorbed into DSP p_3_out.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_2_out, operation Mode is: C+A:B.
+DSP Report: operator p_2_out is absorbed into DSP p_2_out.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A:B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_0_in, operation Mode is: C+A:B.
+DSP Report: operator p_0_in is absorbed into DSP p_0_in.
+DSP Report: Generating DSP p_1_in, operation Mode is: C+A:B.
+DSP Report: operator p_1_in is absorbed into DSP p_1_in.
+DSP Report: Generating DSP p_0_out, operation Mode is: C+A:B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+WARNING: [Synth 8-7129] Port s_axis_tkeep[0] in module soc_npu_myip_npu_OCR_0_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:38 ; elapsed = 00:02:42 . Memory (MB): peak = 2478.168 ; gain = 961.395 ; free physical = 121 ; free virtual = 1359
+---------------------------------------------------------------------------------
+ Sort Area is myip_npu_OCR__GB0 p0_10 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_11 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_12 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_13 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_14 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_15 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_16 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_17 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_18 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_19 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_1a : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_1b : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_1c : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_1d : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_1e : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_1f : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_20 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_21 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_22 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_23 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_24 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_25 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_26 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_27 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_28 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_29 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_2a : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_2b : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_2c : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_2d : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_2e : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_2f : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_30 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_31 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_32 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_33 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_34 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_35 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_36 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_37 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_38 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_39 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_3a : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_3b : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_3c : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_3d : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_3e : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_3f : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_40 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_41 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_42 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_43 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_44 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_45 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_46 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_47 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_48 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_49 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_4a : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_4b : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_4c : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_4d : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_5 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_7 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_8 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_9 : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_a : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_b : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_c : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_d : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_e : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p0_f : 0 0 : 454 454 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_out_8f : 0 0 : 63 63 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_out_87 : 0 0 : 63 63 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_2_out_7f : 0 0 : 63 63 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_3_out_77 : 0 0 : 63 63 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_4_out_6f : 0 0 : 63 63 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_5_out_67 : 0 0 : 63 63 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_6_out_5f : 0 0 : 63 63 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_7_out_56 : 0 0 : 63 63 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_4e : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_51 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_52 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_58 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_5a : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_5b : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_60 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_62 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_63 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_68 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_6a : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_6b : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_70 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_72 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_73 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_78 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_7a : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_7b : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_80 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_82 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_83 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_88 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_8a : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_0_in_8b : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_50 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_53 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_54 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_55 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_59 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_5c : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_5d : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_5e : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_61 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_64 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_65 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_66 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_69 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_6c : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_6d : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_6e : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_71 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_74 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_75 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_76 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_79 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_7c : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_7d : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_7e : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_81 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_84 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_85 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_86 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_89 : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_8c : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_8d : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 p_1_in_8e : 0 0 : 52 52 : Used 1 time 100
+ Sort Area is myip_npu_OCR__GB0 fmap_wr_addr2_2 : 0 0 : 318 1235 : Used 1 time 0
+ Sort Area is myip_npu_OCR__GB0 fmap_wr_addr2_2 : 0 1 : 917 1235 : Used 1 time 0
+ Sort Area is myip_npu_OCR__GB0 line_load_base_addr2_0 : 0 0 : 825 825 : Used 1 time 0
+WARNING: [Synth 8-5835] Resources of type BRAM have been overutilized. Used = 296, Available = 280. Will try to implement using LUT-RAM. 
+ DSP resource Status: line_load_base_addr2_0 0 825 825: Used 1 time : Accepted (139 < 220) uniquify 0 
+ DSP resource Status: fmap_wr_addr2_2 0 1235 318: Used 1 time : Accepted (137 < 220) uniquify 0 
+ DSP resource Status: fmap_wr_addr2_2 1 1235 917: Used 1 time : Accepted (138 < 220) uniquify 0 
+ DSP resource Status: p0_5 0 454 454: Used 1 time : Accepted (63 < 220) uniquify 0 
+ DSP resource Status: p0_7 0 454 454: Used 1 time : Accepted (64 < 220) uniquify 0 
+ DSP resource Status: p0_8 0 454 454: Used 1 time : Accepted (65 < 220) uniquify 0 
+ DSP resource Status: p0_9 0 454 454: Used 1 time : Accepted (66 < 220) uniquify 0 
+ DSP resource Status: p0_a 0 454 454: Used 1 time : Accepted (67 < 220) uniquify 0 
+ DSP resource Status: p0_b 0 454 454: Used 1 time : Accepted (68 < 220) uniquify 0 
+ DSP resource Status: p0_c 0 454 454: Used 1 time : Accepted (69 < 220) uniquify 0 
+ DSP resource Status: p0_d 0 454 454: Used 1 time : Accepted (70 < 220) uniquify 0 
+ DSP resource Status: p0_e 0 454 454: Used 1 time : Accepted (71 < 220) uniquify 0 
+ DSP resource Status: p0_f 0 454 454: Used 1 time : Accepted (72 < 220) uniquify 0 
+ DSP resource Status: p0_10 0 454 454: Used 1 time : Accepted (1 < 220) uniquify 0 
+ DSP resource Status: p0_11 0 454 454: Used 1 time : Accepted (2 < 220) uniquify 0 
+ DSP resource Status: p0_12 0 454 454: Used 1 time : Accepted (3 < 220) uniquify 0 
+ DSP resource Status: p0_13 0 454 454: Used 1 time : Accepted (4 < 220) uniquify 0 
+ DSP resource Status: p0_14 0 454 454: Used 1 time : Accepted (5 < 220) uniquify 0 
+ DSP resource Status: p0_15 0 454 454: Used 1 time : Accepted (6 < 220) uniquify 0 
+ DSP resource Status: p0_16 0 454 454: Used 1 time : Accepted (7 < 220) uniquify 0 
+ DSP resource Status: p0_17 0 454 454: Used 1 time : Accepted (8 < 220) uniquify 0 
+ DSP resource Status: p0_18 0 454 454: Used 1 time : Accepted (9 < 220) uniquify 0 
+ DSP resource Status: p0_19 0 454 454: Used 1 time : Accepted (10 < 220) uniquify 0 
+ DSP resource Status: p0_1a 0 454 454: Used 1 time : Accepted (11 < 220) uniquify 0 
+ DSP resource Status: p0_1b 0 454 454: Used 1 time : Accepted (12 < 220) uniquify 0 
+ DSP resource Status: p0_1c 0 454 454: Used 1 time : Accepted (13 < 220) uniquify 0 
+ DSP resource Status: p0_1d 0 454 454: Used 1 time : Accepted (14 < 220) uniquify 0 
+ DSP resource Status: p0_1e 0 454 454: Used 1 time : Accepted (15 < 220) uniquify 0 
+ DSP resource Status: p0_1f 0 454 454: Used 1 time : Accepted (16 < 220) uniquify 0 
+ DSP resource Status: p0_20 0 454 454: Used 1 time : Accepted (17 < 220) uniquify 0 
+ DSP resource Status: p0_21 0 454 454: Used 1 time : Accepted (18 < 220) uniquify 0 
+ DSP resource Status: p0_22 0 454 454: Used 1 time : Accepted (19 < 220) uniquify 0 
+ DSP resource Status: p0_23 0 454 454: Used 1 time : Accepted (20 < 220) uniquify 0 
+ DSP resource Status: p0_24 0 454 454: Used 1 time : Accepted (21 < 220) uniquify 0 
+ DSP resource Status: p0_25 0 454 454: Used 1 time : Accepted (22 < 220) uniquify 0 
+ DSP resource Status: p0_26 0 454 454: Used 1 time : Accepted (23 < 220) uniquify 0 
+ DSP resource Status: p0_27 0 454 454: Used 1 time : Accepted (24 < 220) uniquify 0 
+ DSP resource Status: p0_28 0 454 454: Used 1 time : Accepted (25 < 220) uniquify 0 
+ DSP resource Status: p0_29 0 454 454: Used 1 time : Accepted (26 < 220) uniquify 0 
+ DSP resource Status: p0_2a 0 454 454: Used 1 time : Accepted (27 < 220) uniquify 0 
+ DSP resource Status: p0_2b 0 454 454: Used 1 time : Accepted (28 < 220) uniquify 0 
+ DSP resource Status: p0_2c 0 454 454: Used 1 time : Accepted (29 < 220) uniquify 0 
+ DSP resource Status: p0_2d 0 454 454: Used 1 time : Accepted (30 < 220) uniquify 0 
+ DSP resource Status: p0_2e 0 454 454: Used 1 time : Accepted (31 < 220) uniquify 0 
+ DSP resource Status: p0_2f 0 454 454: Used 1 time : Accepted (32 < 220) uniquify 0 
+ DSP resource Status: p0_30 0 454 454: Used 1 time : Accepted (33 < 220) uniquify 0 
+ DSP resource Status: p0_31 0 454 454: Used 1 time : Accepted (34 < 220) uniquify 0 
+ DSP resource Status: p0_32 0 454 454: Used 1 time : Accepted (35 < 220) uniquify 0 
+ DSP resource Status: p0_33 0 454 454: Used 1 time : Accepted (36 < 220) uniquify 0 
+ DSP resource Status: p0_34 0 454 454: Used 1 time : Accepted (37 < 220) uniquify 0 
+ DSP resource Status: p0_35 0 454 454: Used 1 time : Accepted (38 < 220) uniquify 0 
+ DSP resource Status: p0_36 0 454 454: Used 1 time : Accepted (39 < 220) uniquify 0 
+ DSP resource Status: p0_37 0 454 454: Used 1 time : Accepted (40 < 220) uniquify 0 
+ DSP resource Status: p0_38 0 454 454: Used 1 time : Accepted (41 < 220) uniquify 0 
+ DSP resource Status: p0_39 0 454 454: Used 1 time : Accepted (42 < 220) uniquify 0 
+ DSP resource Status: p0_3a 0 454 454: Used 1 time : Accepted (43 < 220) uniquify 0 
+ DSP resource Status: p0_3b 0 454 454: Used 1 time : Accepted (44 < 220) uniquify 0 
+ DSP resource Status: p0_3c 0 454 454: Used 1 time : Accepted (45 < 220) uniquify 0 
+ DSP resource Status: p0_3d 0 454 454: Used 1 time : Accepted (46 < 220) uniquify 0 
+ DSP resource Status: p0_3e 0 454 454: Used 1 time : Accepted (47 < 220) uniquify 0 
+ DSP resource Status: p0_3f 0 454 454: Used 1 time : Accepted (48 < 220) uniquify 0 
+ DSP resource Status: p0_40 0 454 454: Used 1 time : Accepted (49 < 220) uniquify 0 
+ DSP resource Status: p0_41 0 454 454: Used 1 time : Accepted (50 < 220) uniquify 0 
+ DSP resource Status: p0_42 0 454 454: Used 1 time : Accepted (51 < 220) uniquify 0 
+ DSP resource Status: p0_43 0 454 454: Used 1 time : Accepted (52 < 220) uniquify 0 
+ DSP resource Status: p0_44 0 454 454: Used 1 time : Accepted (53 < 220) uniquify 0 
+ DSP resource Status: p0_45 0 454 454: Used 1 time : Accepted (54 < 220) uniquify 0 
+ DSP resource Status: p0_46 0 454 454: Used 1 time : Accepted (55 < 220) uniquify 0 
+ DSP resource Status: p0_47 0 454 454: Used 1 time : Accepted (56 < 220) uniquify 0 
+ DSP resource Status: p0_48 0 454 454: Used 1 time : Accepted (57 < 220) uniquify 0 
+ DSP resource Status: p0_49 0 454 454: Used 1 time : Accepted (58 < 220) uniquify 0 
+ DSP resource Status: p0_4a 0 454 454: Used 1 time : Accepted (59 < 220) uniquify 0 
+ DSP resource Status: p0_4b 0 454 454: Used 1 time : Accepted (60 < 220) uniquify 0 
+ DSP resource Status: p0_4c 0 454 454: Used 1 time : Accepted (61 < 220) uniquify 0 
+ DSP resource Status: p0_4d 0 454 454: Used 1 time : Accepted (62 < 220) uniquify 0 
+ DSP resource Status: p_1_in_53 0 52 52: Used 1 time : Accepted (106 < 220) uniquify 0 
+ DSP resource Status: p_0_in_52 0 52 52: Used 1 time : Accepted (83 < 220) uniquify 0 
+ DSP resource Status: p_1_in_54 0 52 52: Used 1 time : Accepted (107 < 220) uniquify 0 
+ DSP resource Status: p_1_in_50 0 52 52: Used 1 time : Accepted (105 < 220) uniquify 0 
+ DSP resource Status: p_0_in_4e 0 52 52: Used 1 time : Accepted (81 < 220) uniquify 0 
+ DSP resource Status: p_0_in_51 0 52 52: Used 1 time : Accepted (82 < 220) uniquify 0 
+ DSP resource Status: p_1_in_55 0 52 52: Used 1 time : Accepted (108 < 220) uniquify 0 
+ DSP resource Status: p_7_out_56 0 63 63: Used 1 time : Accepted (80 < 220) uniquify 0 
+ DSP resource Status: p_1_in_5c 0 52 52: Used 1 time : Accepted (110 < 220) uniquify 0 
+ DSP resource Status: p_0_in_5b 0 52 52: Used 1 time : Accepted (86 < 220) uniquify 0 
+ DSP resource Status: p_1_in_5d 0 52 52: Used 1 time : Accepted (111 < 220) uniquify 0 
+ DSP resource Status: p_1_in_59 0 52 52: Used 1 time : Accepted (109 < 220) uniquify 0 
+ DSP resource Status: p_0_in_58 0 52 52: Used 1 time : Accepted (84 < 220) uniquify 0 
+ DSP resource Status: p_0_in_5a 0 52 52: Used 1 time : Accepted (85 < 220) uniquify 0 
+ DSP resource Status: p_1_in_5e 0 52 52: Used 1 time : Accepted (112 < 220) uniquify 0 
+ DSP resource Status: p_6_out_5f 0 63 63: Used 1 time : Accepted (79 < 220) uniquify 0 
+ DSP resource Status: p_1_in_64 0 52 52: Used 1 time : Accepted (114 < 220) uniquify 0 
+ DSP resource Status: p_0_in_63 0 52 52: Used 1 time : Accepted (89 < 220) uniquify 0 
+ DSP resource Status: p_1_in_65 0 52 52: Used 1 time : Accepted (115 < 220) uniquify 0 
+ DSP resource Status: p_1_in_61 0 52 52: Used 1 time : Accepted (113 < 220) uniquify 0 
+ DSP resource Status: p_0_in_60 0 52 52: Used 1 time : Accepted (87 < 220) uniquify 0 
+ DSP resource Status: p_0_in_62 0 52 52: Used 1 time : Accepted (88 < 220) uniquify 0 
+ DSP resource Status: p_1_in_66 0 52 52: Used 1 time : Accepted (116 < 220) uniquify 0 
+ DSP resource Status: p_5_out_67 0 63 63: Used 1 time : Accepted (78 < 220) uniquify 0 
+ DSP resource Status: p_1_in_6c 0 52 52: Used 1 time : Accepted (118 < 220) uniquify 0 
+ DSP resource Status: p_0_in_6b 0 52 52: Used 1 time : Accepted (92 < 220) uniquify 0 
+ DSP resource Status: p_1_in_6d 0 52 52: Used 1 time : Accepted (119 < 220) uniquify 0 
+ DSP resource Status: p_1_in_69 0 52 52: Used 1 time : Accepted (117 < 220) uniquify 0 
+ DSP resource Status: p_0_in_68 0 52 52: Used 1 time : Accepted (90 < 220) uniquify 0 
+ DSP resource Status: p_0_in_6a 0 52 52: Used 1 time : Accepted (91 < 220) uniquify 0 
+ DSP resource Status: p_1_in_6e 0 52 52: Used 1 time : Accepted (120 < 220) uniquify 0 
+ DSP resource Status: p_4_out_6f 0 63 63: Used 1 time : Accepted (77 < 220) uniquify 0 
+ DSP resource Status: p_1_in_74 0 52 52: Used 1 time : Accepted (122 < 220) uniquify 0 
+ DSP resource Status: p_0_in_73 0 52 52: Used 1 time : Accepted (95 < 220) uniquify 0 
+ DSP resource Status: p_1_in_75 0 52 52: Used 1 time : Accepted (123 < 220) uniquify 0 
+ DSP resource Status: p_1_in_71 0 52 52: Used 1 time : Accepted (121 < 220) uniquify 0 
+ DSP resource Status: p_0_in_70 0 52 52: Used 1 time : Accepted (93 < 220) uniquify 0 
+ DSP resource Status: p_0_in_72 0 52 52: Used 1 time : Accepted (94 < 220) uniquify 0 
+ DSP resource Status: p_1_in_76 0 52 52: Used 1 time : Accepted (124 < 220) uniquify 0 
+ DSP resource Status: p_3_out_77 0 63 63: Used 1 time : Accepted (76 < 220) uniquify 0 
+ DSP resource Status: p_1_in_7c 0 52 52: Used 1 time : Accepted (126 < 220) uniquify 0 
+ DSP resource Status: p_0_in_7b 0 52 52: Used 1 time : Accepted (98 < 220) uniquify 0 
+ DSP resource Status: p_1_in_7d 0 52 52: Used 1 time : Accepted (127 < 220) uniquify 0 
+ DSP resource Status: p_1_in_79 0 52 52: Used 1 time : Accepted (125 < 220) uniquify 0 
+ DSP resource Status: p_0_in_78 0 52 52: Used 1 time : Accepted (96 < 220) uniquify 0 
+ DSP resource Status: p_0_in_7a 0 52 52: Used 1 time : Accepted (97 < 220) uniquify 0 
+ DSP resource Status: p_1_in_7e 0 52 52: Used 1 time : Accepted (128 < 220) uniquify 0 
+ DSP resource Status: p_2_out_7f 0 63 63: Used 1 time : Accepted (75 < 220) uniquify 0 
+ DSP resource Status: p_1_in_84 0 52 52: Used 1 time : Accepted (130 < 220) uniquify 0 
+ DSP resource Status: p_0_in_83 0 52 52: Used 1 time : Accepted (101 < 220) uniquify 0 
+ DSP resource Status: p_1_in_85 0 52 52: Used 1 time : Accepted (131 < 220) uniquify 0 
+ DSP resource Status: p_1_in_81 0 52 52: Used 1 time : Accepted (129 < 220) uniquify 0 
+ DSP resource Status: p_0_in_80 0 52 52: Used 1 time : Accepted (99 < 220) uniquify 0 
+ DSP resource Status: p_0_in_82 0 52 52: Used 1 time : Accepted (100 < 220) uniquify 0 
+ DSP resource Status: p_1_in_86 0 52 52: Used 1 time : Accepted (132 < 220) uniquify 0 
+ DSP resource Status: p_1_out_87 0 63 63: Used 1 time : Accepted (74 < 220) uniquify 0 
+ DSP resource Status: p_1_in_8c 0 52 52: Used 1 time : Accepted (134 < 220) uniquify 0 
+ DSP resource Status: p_0_in_8b 0 52 52: Used 1 time : Accepted (104 < 220) uniquify 0 
+ DSP resource Status: p_1_in_8d 0 52 52: Used 1 time : Accepted (135 < 220) uniquify 0 
+ DSP resource Status: p_1_in_89 0 52 52: Used 1 time : Accepted (133 < 220) uniquify 0 
+ DSP resource Status: p_0_in_88 0 52 52: Used 1 time : Accepted (102 < 220) uniquify 0 
+ DSP resource Status: p_0_in_8a 0 52 52: Used 1 time : Accepted (103 < 220) uniquify 0 
+ DSP resource Status: p_1_in_8e 0 52 52: Used 1 time : Accepted (136 < 220) uniquify 0 
+ DSP resource Status: p_0_out_8f 0 63 63: Used 1 time : Accepted (73 < 220) uniquify 0 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|soc_npu_myip_npu_OCR_0_1 | u_fmap_ping/mem_reg     | 32 K x 8(READ_FIRST)   | W |   | 32 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|soc_npu_myip_npu_OCR_0_1 | u_weight_bram_b/mem_reg | 43 K x 32(READ_FIRST)  | W |   | 43 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
+|soc_npu_myip_npu_OCR_0_1 | u_weight_bram_a/mem_reg | 40 K x 32(READ_FIRST)  | W |   | 40 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
++-------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------------------+------------------------------+-----------+----------------------+----------------+
+|Module Name              | RTL Object                   | Inference | Size (Depth x Width) | Primitives     | 
++-------------------------+------------------------------+-----------+----------------------+----------------+
+|insti_0/u_conv_engine    | psum_banks[0].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[1].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[2].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[3].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[4].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[5].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[6].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[7].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|soc_npu_myip_npu_OCR_0_1 | u_fmap_pong/mem_reg          | Implied   | 32 K x 8             | RAM64M x 1536  | 
++-------------------------+------------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|conv_engine | A*B          | 15     | 8      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|conv_engine | A*B          | 7      | 7      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|conv_engine | PCIN+(D+A)*B | 3      | 15     | -      | 8      | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe          | A*B          | 8      | 8      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 19     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 19     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 19     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 19     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 19     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 19     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 19     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 48     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | C+A:B        | 30     | 18     | 19     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:51 ; elapsed = 00:02:54 . Memory (MB): peak = 2478.168 ; gain = 961.395 ; free physical = 142 ; free virtual = 1307
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:51 ; elapsed = 00:02:54 . Memory (MB): peak = 2478.168 ; gain = 961.395 ; free physical = 127 ; free virtual = 1303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|soc_npu_myip_npu_OCR_0_1 | u_fmap_ping/mem_reg     | 32 K x 8(READ_FIRST)   | W |   | 32 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|soc_npu_myip_npu_OCR_0_1 | u_weight_bram_b/mem_reg | 43 K x 32(READ_FIRST)  | W |   | 43 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
+|soc_npu_myip_npu_OCR_0_1 | u_weight_bram_a/mem_reg | 40 K x 32(READ_FIRST)  | W |   | 40 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
++-------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++-------------------------+------------------------------+-----------+----------------------+----------------+
+|Module Name              | RTL Object                   | Inference | Size (Depth x Width) | Primitives     | 
++-------------------------+------------------------------+-----------+----------------------+----------------+
+|insti_0/u_conv_engine    | psum_banks[0].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[1].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[2].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[3].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[4].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[5].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[6].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|insti_0/u_conv_engine    | psum_banks[7].u_psum/mem_reg | Implied   | 64 x 32              | RAM64M x 11    | 
+|soc_npu_myip_npu_OCR_0_1 | u_fmap_pong/mem_reg          | Implied   | 32 K x 8             | RAM64M x 1536  | 
++-------------------------+------------------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/u_fmap_ping/mem_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_fmap_ping/mem_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_fmap_ping/mem_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_fmap_ping/mem_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_fmap_ping/mem_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_fmap_ping/mem_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_fmap_ping/mem_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_fmap_ping/mem_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_b/mem_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_weight_bram_a/mem_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:03 ; elapsed = 00:03:07 . Memory (MB): peak = 2478.168 ; gain = 961.395 ; free physical = 121 ; free virtual = 1319
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:12 ; elapsed = 00:03:16 . Memory (MB): peak = 2560.410 ; gain = 1043.637 ; free physical = 129 ; free virtual = 1259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:12 ; elapsed = 00:03:16 . Memory (MB): peak = 2560.410 ; gain = 1043.637 ; free physical = 137 ; free virtual = 1261
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:14 ; elapsed = 00:03:18 . Memory (MB): peak = 2560.410 ; gain = 1043.637 ; free physical = 194 ; free virtual = 1217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:14 ; elapsed = 00:03:18 . Memory (MB): peak = 2560.410 ; gain = 1043.637 ; free physical = 188 ; free virtual = 1222
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:15 ; elapsed = 00:03:19 . Memory (MB): peak = 2575.285 ; gain = 1058.512 ; free physical = 179 ; free virtual = 1232
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:15 ; elapsed = 00:03:19 . Memory (MB): peak = 2575.285 ; gain = 1058.512 ; free physical = 177 ; free virtual = 1234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|conv_engine | A*B         | 14     | 8      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|conv_engine | A*B         | 6      | 6      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|conv_engine | PCIN+D+A*B  | 3      | 12     | -      | 8      | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | PCIN+A:B+C  | 30     | 18     | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | A:B+C       | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | (C+A:B)'    | 30     | 18     | 48     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | PCIN+A:B+C  | 30     | 18     | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | A:B+C       | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | (C+A:B)'    | 30     | 18     | 48     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | PCIN+A:B+C  | 30     | 18     | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | A:B+C       | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | (C+A:B)'    | 30     | 18     | 48     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | PCIN+A:B+C  | 30     | 18     | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | A:B+C       | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | (C+A:B)'    | 30     | 18     | 48     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | PCIN+A:B+C  | 30     | 18     | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | A:B+C       | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | (C+A:B)'    | 30     | 18     | 48     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | PCIN+A:B+C  | 30     | 18     | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | A:B+C       | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | (C+A:B)'    | 30     | 18     | 48     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | PCIN+A:B+C  | 30     | 18     | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | A:B+C       | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | (C+A:B)'    | 30     | 18     | 48     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | PCIN+A:B+C  | 30     | 18     | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | Dynamic     | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|pe_array    | A:B+C       | 30     | 18     | 48     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pe_array    | (C+A:B)'    | 30     | 18     | 48     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pe          | (A*B)'      | 30     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   265|
+|2     |DSP48E1  |   131|
+|7     |LUT1     |    17|
+|8     |LUT2     |  1254|
+|9     |LUT3     |  1935|
+|10    |LUT4     |  5306|
+|11    |LUT5     |  1160|
+|12    |LUT6     |  7052|
+|13    |MUXF7    |  1976|
+|14    |MUXF8    |   728|
+|15    |RAM64M   |  1624|
+|16    |RAMB36E1 |   136|
+|19    |FDCE     |  7759|
+|20    |FDPE     |     6|
+|21    |FDRE     |  3679|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:15 ; elapsed = 00:03:19 . Memory (MB): peak = 2575.285 ; gain = 1058.512 ; free physical = 177 ; free virtual = 1240
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:07 ; elapsed = 00:03:12 . Memory (MB): peak = 2575.285 ; gain = 938.668 ; free physical = 197 ; free virtual = 1247
+Synthesis Optimization Complete : Time (s): cpu = 00:03:15 ; elapsed = 00:03:19 . Memory (MB): peak = 2575.293 ; gain = 1058.512 ; free physical = 192 ; free virtual = 1247
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2585.191 ; gain = 0.000 ; free physical = 165 ; free virtual = 1392
+INFO: [Netlist 29-17] Analyzing 4860 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2653.094 ; gain = 0.000 ; free physical = 132 ; free virtual = 1402
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1624 instances were transformed.
+  RAM64M => RAM64M (RAMD64E(x4)): 1624 instances
+
+Synth Design complete | Checksum: 5b368f4d
+INFO: [Common 17-83] Releasing license: Synthesis
+146 Infos, 186 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:35 ; elapsed = 00:03:36 . Memory (MB): peak = 2653.094 ; gain = 1264.113 ; free physical = 148 ; free virtual = 1392
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1409.289; main = 1409.289; forked = 258.856
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3413.297; main = 2653.098; forked = 915.695
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2677.105 ; gain = 0.000 ; free physical = 172 ; free virtual = 1377
+INFO: [Common 17-1381] The checkpoint '/home/jaehyeok95/team_project_npu/team_project_npu.runs/soc_npu_myip_npu_OCR_0_1_synth_1/soc_npu_myip_npu_OCR_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP soc_npu_myip_npu_OCR_0_1, cache-ID = cb0ab2828f2a9d2d
+INFO: [Coretcl 2-1174] Renamed 95 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.1 . Memory (MB): peak = 2677.105 ; gain = 0.000 ; free physical = 591 ; free virtual = 2170
+INFO: [Common 17-1381] The checkpoint '/home/jaehyeok95/team_project_npu/team_project_npu.runs/soc_npu_myip_npu_OCR_0_1_synth_1/soc_npu_myip_npu_OCR_0_1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file soc_npu_myip_npu_OCR_0_1_utilization_synth.rpt -pb soc_npu_myip_npu_OCR_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 12:49:40 2026...

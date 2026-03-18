@@ -738,8 +738,8 @@
 				"/myip_npu_OCR_0/s_axis": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
-						"ACLK": { "actual": "s_axis_aclk"},
-						"ARESETN": { "actual": "s_axis_aresetn"},
+						"ACLK": { "actual": "s00_axi_aclk"},
+						"ARESETN": { "actual": "s00_axi_aresetn"},
 						"TDATA": { "actual": "s_axis_tdata[7:0]"},
 						"TKEEP": { "actual": "s_axis_tkeep[0:0]"},
 						"TLAST": { "actual": "s_axis_tlast"},

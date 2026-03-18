@@ -7,7 +7,8 @@
       "name": "soc_npu",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2"
+      "tool_version": "2024.2",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -1351,10 +1352,15 @@
       },
       "myip_npu_OCR_0": {
         "vlnv": "user.org:user:myip_npu_OCR:1.0",
-        "ip_revision": "26",
+        "ip_revision": "39",
         "xci_name": "soc_npu_myip_npu_OCR_0_1",
         "xci_path": "ip/soc_npu_myip_npu_OCR_0_1/soc_npu_myip_npu_OCR_0_1.xci",
-        "inst_hier_path": "myip_npu_OCR_0"
+        "inst_hier_path": "myip_npu_OCR_0",
+        "parameters": {
+          "P": {
+            "value": "8"
+          }
+        }
       },
       "axi_dma_0": {
         "vlnv": "xilinx.com:ip:axi_dma:7.1",

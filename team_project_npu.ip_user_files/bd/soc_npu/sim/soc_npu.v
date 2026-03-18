@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-//Date        : Mon Mar 16 18:58:31 2026
+//Date        : Wed Mar 18 12:45:20 2026
 //Host        : jaehyeok95-AORUS-5-MB running 64-bit Ubuntu 24.04.3 LTS
 //Command     : generate_target soc_npu.bd
 //Design      : soc_npu
@@ -1125,8 +1125,6 @@ module soc_npu
         .s00_axi_wready(axi_smc_M01_AXI_WREADY),
         .s00_axi_wstrb(axi_smc_M01_AXI_WSTRB),
         .s00_axi_wvalid(axi_smc_M01_AXI_WVALID),
-        .s_axis_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axis_aresetn(rst_ps7_0_50M_peripheral_aresetn),
         .s_axis_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
         .s_axis_tkeep(axi_dma_0_M_AXIS_MM2S_TKEEP),
         .s_axis_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),

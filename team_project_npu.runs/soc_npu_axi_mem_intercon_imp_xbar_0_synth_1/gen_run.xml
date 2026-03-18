@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="soc_npu_axi_mem_intercon_imp_xbar_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1773468188">
+<GenRun Id="soc_npu_axi_mem_intercon_imp_xbar_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1773746764">
   <File Type="RDS-DCP" Name="soc_npu_axi_mem_intercon_imp_xbar_0.dcp"/>
   <File Type="RDS-RDS" Name="soc_npu_axi_mem_intercon_imp_xbar_0.vds"/>
   <File Type="REPORTS-TCL" Name="soc_npu_axi_mem_intercon_imp_xbar_0_reports.tcl"/>
