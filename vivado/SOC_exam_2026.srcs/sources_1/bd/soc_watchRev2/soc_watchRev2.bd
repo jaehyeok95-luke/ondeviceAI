@@ -1288,7 +1288,7 @@
       },
       "myip_stopwatch_0": {
         "vlnv": "user.org:user:myip_stopwatch:1.0",
-        "ip_revision": "44",
+        "ip_revision": "66",
         "xci_name": "soc_watchRev2_myip_stopwatch_0_0",
         "xci_path": "ip/soc_watchRev2_myip_stopwatch_0_0/soc_watchRev2_myip_stopwatch_0_0.xci",
         "inst_hier_path": "myip_stopwatch_0"

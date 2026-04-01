@@ -1,0 +1,31 @@
+verilog xil_defaultlib --include "/media/user14/data/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/3cbc" --include "../../../../SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/ec67/hdl" \
+"../../../bd/soc_watchRev2/ip/soc_watchRev2_clk_wiz_0/soc_watchRev2_clk_wiz_0_clk_wiz.v" \
+"../../../bd/soc_watchRev2/ip/soc_watchRev2_clk_wiz_0/soc_watchRev2_clk_wiz_0.v" \
+"../../../bd/soc_watchRev2/ip/soc_watchRev2_lmb_bram_0/sim/soc_watchRev2_lmb_bram_0.v" \
+"../../../bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/sim/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v" \
+"../../../bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_xlconcat_0/sim/soc_watchRev2_microblaze_riscv_0_xlconcat_0.v" \
+"../../../bd/soc_watchRev2/ipshared/e905/hdl/myip_koreawatch_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_watchRev2/ipshared/e905/hdl/myip_koreawatch.v" \
+"../../../bd/soc_watchRev2/ipshared/e905/src/exam02_sequential_logic.v" \
+"../../../bd/soc_watchRev2/ipshared/e905/hdl/korea_watch.v" \
+"../../../bd/soc_watchRev2/ip/soc_watchRev2_myip_koreawatch_0_0/sim/soc_watchRev2_myip_koreawatch_0_0.v" \
+"../../../bd/soc_watchRev2/ipshared/7069/hdl/myip_stopwatch_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_watchRev2/ipshared/7069/src/exam03_var_module.v" \
+"../../../bd/soc_watchRev2/ipshared/7069/hdl/myip_stopwatch.v" \
+"../../../bd/soc_watchRev2/ip/soc_watchRev2_myip_stopwatch_0_0/sim/soc_watchRev2_myip_stopwatch_0_0.v" \
+"../../../bd/soc_watchRev2/ipshared/3a1a/hdl/myip_timer_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_watchRev2/ipshared/3a1a/hdl/cook_timer.v" \
+"../../../bd/soc_watchRev2/ipshared/3a1a/hdl/myip_timer.v" \
+"../../../bd/soc_watchRev2/ip/soc_watchRev2_myip_timer_0_0/sim/soc_watchRev2_myip_timer_0_0.v" \
+"../../../bd/soc_watchRev2/ipshared/1ae8/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_watchRev2/ipshared/1ae8/src/clock_lib.v" \
+"../../../bd/soc_watchRev2/ipshared/1ae8/src/controller.v" \
+"../../../bd/soc_watchRev2/ipshared/1ae8/src/test_top.v" \
+"../../../bd/soc_watchRev2/ipshared/1ae8/hdl/myip_iic_cntr.v" \
+"../../../bd/soc_watchRev2/ip/soc_watchRev2_myip_iic_cntr_0_0/sim/soc_watchRev2_myip_iic_cntr_0_0.v" \
+"../../../bd/soc_watchRev2/sim/soc_watchRev2.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

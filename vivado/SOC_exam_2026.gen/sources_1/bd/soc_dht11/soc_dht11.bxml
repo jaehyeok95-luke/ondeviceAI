@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="43">
+  <CompositeFile CompositeFileTopName="soc_dht11" CanBeSetAsTop="true" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1769063364"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1769063172"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1769063364"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1769063172"/>
+    <FileCollection Name="SOURCES" Type="SOURCES"/>
+  </CompositeFile>
+</Root>

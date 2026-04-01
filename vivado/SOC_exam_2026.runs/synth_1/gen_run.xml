@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1773140328" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/soc_hello_wrapper.dcp">
+  <File Type="RDS-DCP" Name="soc_watchRev2_wrapper.dcp"/>
+  <File Type="RDS-RDS" Name="soc_watchRev2_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="soc_watchRev2_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="soc_watchRev2_wrapper.tcl"/>
+  <File Type="RDS-UTIL" Name="soc_watchRev2_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="soc_watchRev2_wrapper_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/soc_watchRev2/soc_watchRev2.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_watchRev2/hdl/soc_watchRev2_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_watch/soc_watch.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_watch/hdl/soc_watch_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_completeClock/soc_completeClock.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_completeClock/hdl/soc_completeClock_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_INT/soc_INT.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_INT/hdl/soc_INT_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_test/soc_test.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_test/hdl/soc_test_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_cooktimer/soc_cooktimer.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_cooktimer/hdl/soc_cooktimer_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_iic_dht11/soc_iic_dht11.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_iic_dht11/hdl/soc_iic_dht11_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_iic_cntr/soc_iic_cntr.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_iic_cntr/hdl/soc_iic_cntr_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_fnd_cntr/soc_fnd_cntr.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_fnd_cntr/hdl/soc_fnd_cntr_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_iic/soc_iic.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_iic/hdl/soc_iic_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_dht11/soc_dht11.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_dht11/hdl/soc_dht11_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_fnd/soc_fnd.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_fnd/hdl/soc_fnd_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_gpio/soc_gpio.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_gpio/hdl/soc_gpio_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_hello/soc_hello.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_hello/hdl/soc_hello_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="soc_watchRev2_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Downloads/Basys-3-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../basys_exam/basys_exam.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1766470190"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/soc_hello_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="soc_cooktimer_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_INT_lmb_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_cooktimer_myip_iic_cntr_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_completeClock_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_cooktimer_myip_fnd_cntr_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_cooktimer_myip_cooktimer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_INT_myip_iic_cntr_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_completeClock_myip_iic_cntr_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_INT_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watch_microblaze_riscv_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_cooktimer_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_INT_microblaze_riscv_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_completeClock_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watch_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watch_myip_iic_cntr_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watch_myip_koreawatch_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_INT_clk_wiz_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_INT_microblaze_riscv_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watchRev2_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watch_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_test_microblaze_riscv_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_test_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_dlmb_v10_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_ilmb_v10_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_ilmb_bram_if_cntlr_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_test_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watchRev2_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_dlmb_bram_if_cntlr_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_microblaze_riscv_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watchRev2_myip_iic_cntr_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_completeClock_microblaze_riscv_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watchRev2_myip_stopwatch_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_lmb_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_cooktimer_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_completeClock_microblaze_riscv_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_watchRev2_myip_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_axi_uartlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_hello_mdm_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_cooktimer_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_INT_microblaze_riscv_0_axi_intc_1"/>
+</GenRun>

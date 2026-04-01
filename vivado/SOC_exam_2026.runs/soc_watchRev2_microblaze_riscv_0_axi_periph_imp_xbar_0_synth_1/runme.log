@@ -1,0 +1,397 @@
+
+*** Running vivado
+    with args -log soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri Jan 30 16:59:32 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user14/data/work/ip_repo/myip_timer_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user14/data/work/ip_repo/myip_koreawatch_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user14/data/work/ip_repo/myip_stopwatch_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user14/data/work/ip_repo/myip_cooktimer_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user14/data/work/ip_repo/myip_iic_cntr_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user14/data/work/ip_repo/myip_dht11_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user14/data/work/ip_repo/myip_fnd_cntr_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/user14/data/tools/xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0
+Command: synth_design -top soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 711967
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.938 ; gain = 373.859 ; free physical = 217 ; free virtual = 33068
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:155]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:157]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:158]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:160]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:161]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:163]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:164]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:166]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:167]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:169]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:170]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:172]
+INFO: [Synth 8-6157] synthesizing module 'soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_34_axi_crossbar' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_34_crossbar_sasd' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:1234]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_34_addr_decoder' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:790]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_carry_and' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_carry_and' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized0' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized0' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized1' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized1' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized2' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized2' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized3' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized3' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized4' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized4' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized5' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized5' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_34_addr_decoder' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:790]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_34_decerr_slave' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:3493]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_34_decerr_slave' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:3493]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_34_addr_arbiter_sasd' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_34_addr_arbiter_sasd' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:63]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_34_splitter' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_34_splitter' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_34_splitter__parameterized0' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_34_splitter__parameterized0' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized0' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized0' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized1' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized1' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_33_axic_register_slice' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/3ee4/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_33_axic_register_slice' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/3ee4/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized2' [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized2' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_34_crossbar_sasd' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:1234]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_34_axi_crossbar' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
+INFO: [Synth 8-6155] done synthesizing module 'soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0' (0#1) [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/synth/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_aw_trans_seq_i_reg was removed.  [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:2051]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_ar_trans_seq_i_reg was removed.  [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:2062]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_w_beat_cnt_i_reg was removed.  [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:2073]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_r_beat_cnt_i_reg was removed.  [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/a7e3/hdl/axi_crossbar_v2_1_vl_rfs.v:2086]
+WARNING: [Synth 8-7129] Port S[0] in module generic_baseblocks_v2_1_2_mux_enc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[0] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WLAST in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARID[0] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[7] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[6] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[5] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[4] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[3] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[2] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[1] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[0] in module axi_crossbar_v2_1_34_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[1] in module axi_crossbar_v2_1_34_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[0] in module axi_crossbar_v2_1_34_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[0] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARID[0] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[6] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[5] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[4] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[3] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[2] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[1] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[0] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[6] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[5] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[4] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[3] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[2] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[1] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[0] in module axi_crossbar_v2_1_34_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awid[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[7] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[6] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[5] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[4] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[3] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awburst[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awburst[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlock[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[3] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[3] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wlast[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arid[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[7] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[6] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[5] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[4] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[3] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arsize[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arsize[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arsize[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arburst[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arburst[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlock[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[3] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[3] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[6] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[5] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[4] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[3] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[6] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[5] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[4] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[3] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[1] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rid[6] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rid[5] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rid[4] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rid[3] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rid[2] in module axi_crossbar_v2_1_34_axi_crossbar is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2033.906 ; gain = 557.828 ; free physical = 200 ; free virtual = 32624
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2033.906 ; gain = 557.828 ; free physical = 192 ; free virtual = 32616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2033.906 ; gain = 557.828 ; free physical = 192 ; free virtual = 32616
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2033.906 ; gain = 0.000 ; free physical = 175 ; free virtual = 32575
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ip/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2133.383 ; gain = 0.000 ; free physical = 283 ; free virtual = 32523
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2133.383 ; gain = 0.000 ; free physical = 283 ; free virtual = 32523
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2133.383 ; gain = 657.305 ; free physical = 356 ; free virtual = 32503
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2141.387 ; gain = 665.309 ; free physical = 356 ; free virtual = 32503
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /media/user14/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2141.387 ; gain = 665.309 ; free physical = 356 ; free virtual = 32503
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2141.387 ; gain = 665.309 ; free physical = 349 ; free virtual = 32500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+	               36 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   36 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 64    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3936] Found unconnected internal register 'gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_watchRev2/ipshared/3ee4/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2141.387 ; gain = 665.309 ; free physical = 297 ; free virtual = 32448
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2141.387 ; gain = 665.309 ; free physical = 436 ; free virtual = 32334
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2151.395 ; gain = 675.316 ; free physical = 401 ; free virtual = 32307
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2161.418 ; gain = 685.340 ; free physical = 387 ; free virtual = 32293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2295.230 ; gain = 819.152 ; free physical = 257 ; free virtual = 32165
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2295.230 ; gain = 819.152 ; free physical = 257 ; free virtual = 32165
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2295.230 ; gain = 819.152 ; free physical = 257 ; free virtual = 32165
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2295.230 ; gain = 819.152 ; free physical = 257 ; free virtual = 32165
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2295.230 ; gain = 819.152 ; free physical = 257 ; free virtual = 32165
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2295.230 ; gain = 819.152 ; free physical = 257 ; free virtual = 32165
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |    24|
+|3     |LUT3 |    49|
+|4     |LUT4 |    53|
+|5     |LUT5 |    80|
+|6     |LUT6 |   101|
+|7     |FDRE |   136|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2295.230 ; gain = 819.152 ; free physical = 257 ; free virtual = 32165
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 87 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2295.230 ; gain = 719.676 ; free physical = 238 ; free virtual = 32146
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2295.238 ; gain = 819.152 ; free physical = 243 ; free virtual = 32150
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2295.238 ; gain = 0.000 ; free physical = 415 ; free virtual = 32322
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2351.258 ; gain = 0.000 ; free physical = 374 ; free virtual = 32283
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ab6d7b47
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2351.258 ; gain = 947.637 ; free physical = 366 ; free virtual = 32275
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1350.464; main = 1336.587; forked = 198.727
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3054.250; main = 2351.262; forked = 920.863
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.270 ; gain = 0.000 ; free physical = 366 ; free virtual = 32275
+INFO: [Common 17-1381] The checkpoint '/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0_synth_1/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0, cache-ID = 57f5de27c4d7dfb6
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.270 ; gain = 0.000 ; free physical = 346 ; free virtual = 32257
+INFO: [Common 17-1381] The checkpoint '/media/user14/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0_synth_1/soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0_utilization_synth.rpt -pb soc_watchRev2_microblaze_riscv_0_axi_periph_imp_xbar_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 30 16:59:59 2026...
