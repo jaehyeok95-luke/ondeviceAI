@@ -133,68 +133,31 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/soc_rtos_ver1/soc_rtos_ver1.bd">
+      <File Path="$PSRCDIR/sources_1/imports/myip_RTOS_2_2/hdl/myip_RTOS.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="soc_rtos_ver1.bd" FileRelPathName="ip/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0.xci">
-          <Proxy FileSetName="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PGENDIR/sources_1/bd/soc_rtos_ver1/hdl/soc_rtos_ver1_wrapper.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_RTOS_2_2/hdl/myip_RTOS.v"/>
+          <Attr Name="ImportTime" Val="1772767295"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/ip_repo/myip_RTOS_1_0/hdl/tick_timebase.v">
+      <File Path="$PSRCDIR/sources_1/imports/myip_RTOS_2_2/src/tick_timebase.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_RTOS_1_0/hdl/tick_timebase.v"/>
-          <Attr Name="ImportTime" Val="1770104977"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_RTOS_2_2/src/tick_timebase.v"/>
+          <Attr Name="ImportTime" Val="1772762329"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/hdl/myip_RTOS_slave_lite_v1_0_S00_AXI.v">
+      <File Path="$PSRCDIR/sources_1/imports/myip_RTOS_2_2/hdl/myip_RTOS_slave_lite_v2_2_S00_AXI.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_RTOS_1_0/hdl/myip_RTOS_slave_lite_v1_0_S00_AXI.v"/>
-          <Attr Name="ImportTime" Val="1770248738"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/hdl/tick_timebase.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_RTOS_1_0/hdl/tick_timebase.v"/>
-          <Attr Name="ImportTime" Val="1770175671"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/ip_repo/myip_irq_cntr_1_0/hdl/irq_cntr.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_irq_cntr_1_0/hdl/irq_cntr.v"/>
-          <Attr Name="ImportTime" Val="1770185343"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/can_bit_timing.v">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_RTOS_2_2/hdl/myip_RTOS_slave_lite_v2_2_S00_AXI.v"/>
+          <Attr Name="ImportTime" Val="1772767268"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -265,12 +228,6 @@
       </File>
       <Config>
         <Option Name="TopAutoSet" Val="TRUE"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0" RelGenDir="$PGENDIR/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0">
-      <Config>
-        <Option Name="TopModule" Val="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="soc_rtos_can_myip_can_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/soc_rtos_can_myip_can_0_0" RelGenDir="$PGENDIR/soc_rtos_can_myip_can_0_0">
@@ -348,16 +305,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_synth_1" Type="Ft3:Synth" SrcSet="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0" Part="xc7a35tcpg236-1" ConstrsSet="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2024"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="soc_rtos_can_myip_can_0_0_synth_1" Type="Ft3:Synth" SrcSet="soc_rtos_can_myip_can_0_0" Part="xc7a35tcpg236-1" ConstrsSet="soc_rtos_can_myip_can_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/soc_rtos_can_myip_can_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/soc_rtos_can_myip_can_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/soc_rtos_can_myip_can_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
@@ -420,9 +367,7 @@
     </Run>
     <Run Id="soc_rtos_can_myip_RTOS_0_1_synth_1" Type="Ft3:Synth" SrcSet="soc_rtos_can_myip_RTOS_0_1" Part="xc7a35tcpg236-1" ConstrsSet="soc_rtos_can_myip_RTOS_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/soc_rtos_can_myip_RTOS_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/soc_rtos_can_myip_RTOS_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/soc_rtos_can_myip_RTOS_0_1_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -444,23 +389,6 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2024"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2024"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -569,9 +497,7 @@
     </Run>
     <Run Id="soc_rtos_can_myip_RTOS_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="soc_rtos_can_myip_RTOS_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="soc_rtos_can_myip_RTOS_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/soc_rtos_can_myip_RTOS_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/soc_rtos_can_myip_RTOS_0_1_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

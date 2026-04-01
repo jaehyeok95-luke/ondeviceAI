@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1772767548" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/soc_rtos_ver1_wrapper.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="soc_rtos_can_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="soc_rtos_can_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="soc_rtos_can_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="soc_rtos_can_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="soc_rtos_can_wrapper_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="soc_rtos_can_wrapper.vds"/>
   <File Type="REPORTS-TCL" Name="soc_rtos_can_wrapper_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="soc_rtos_can_wrapper_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="soc_rtos_can_wrapper.tcl"/>
+  <File Type="RDS-UTIL" Name="soc_rtos_can_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="soc_rtos_can_wrapper_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/soc_rtos_can/soc_rtos_can.bd">
@@ -126,12 +123,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_myip_RTOS_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_dlmb_bram_if_cntlr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_microblaze_riscv_0_axi_periph_imp_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_lmb_bram_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_clk_wiz_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_microblaze_riscv_0_axi_intc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_myip_can_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_myip_can_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_microblaze_riscv_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_myip_RTOS_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_microblaze_riscv_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_lmb_bram_0"/>
 </GenRun>
