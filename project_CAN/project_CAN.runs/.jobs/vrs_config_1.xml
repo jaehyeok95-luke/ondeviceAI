@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="soc_rtos_ver1_axi_uartlite_0_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_clk_wiz_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_dlmb_v10_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_ilmb_v10_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="soc_rtos_ver1_dlmb_v10_0_synth_1"/>
+	</Run>
+	<Run Id="soc_rtos_ver1_lmb_bram_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_mdm_1_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_microblaze_riscv_0_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_microblaze_riscv_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_microblaze_riscv_0_axi_intc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_microblaze_riscv_0_axi_periph_imp_xbar_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_microblaze_riscv_0_axi_periph_imp_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_myip_RTOS_0_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_myip_RTOS_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_myip_irq_cntr_0_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_myip_irq_cntr_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_rtos_ver1_proc_sys_reset_0_0_synth_1" LaunchDir="/home/user14/project_CAN/project_CAN.runs/soc_rtos_ver1_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

@@ -1,0 +1,168 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Fri Mar  6 12:28:07 2026
+| Host         : user14-B80KV-AP35BKE running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_methodology -file soc_rtos_can_wrapper_methodology_drc_routed.rpt -pb soc_rtos_can_wrapper_methodology_drc_routed.pb -rpx soc_rtos_can_wrapper_methodology_drc_routed.rpx
+| Design       : soc_rtos_can_wrapper
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 26
++-----------+----------+-------------------------------+--------+
+| Rule      | Severity | Description                   | Checks |
++-----------+----------+-------------------------------+--------+
+| LUTAR-1   | Warning  | LUT drives async reset alert  | 2      |
+| TIMING-9  | Warning  | Unknown CDC Logic             | 1      |
+| TIMING-16 | Warning  | Large setup violation         | 18     |
+| TIMING-18 | Warning  | Missing input or output delay | 5      |
++-----------+----------+-------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell soc_rtos_can_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Decode_I/Serial_Dbg_Intf.abstractcs_busy_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) soc_rtos_can_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.abstractcs_busy_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell soc_rtos_can_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.resume_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) soc_rtos_can_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.resumeack_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.003 ns between soc_rtos_can_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Decode_I/ex_valid_reg/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/microblaze_riscv_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/ADDRBWRADDR[2] (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.064 ns between soc_rtos_can_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Decode_I/ex_valid_reg/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/microblaze_riscv_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/ADDRBWRADDR[13] (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -10.465 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[7]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -10.728 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[13]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -10.735 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[12]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -10.882 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[1]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -10.914 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[14]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -10.921 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[10]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -10.934 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[9]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -10.940 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[15]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -10.980 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[11]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -11.031 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[5]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -11.046 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[0]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -11.047 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[3]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -11.060 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[2]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -11.098 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[4]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -11.102 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[6]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -11.131 ns between soc_rtos_can_i/microblaze_riscv_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[2]/C (clocked by clk_out1_soc_rtos_can_clk_wiz_0) and soc_rtos_can_i/myip_RTOS_0/inst/myip_RTOS_slave_lite_v2_2_S00_AXI_inst/block_set_pulse_reg[8]/D (clocked by clk_out1_soc_rtos_can_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on can_rx_port_0 relative to the rising and/or falling clock edge(s) of sys_clock.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on reset relative to the rising and/or falling clock edge(s) of sys_clock.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on usb_uart_rxd relative to the rising and/or falling clock edge(s) of sys_clock.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on can_tx_port_0 relative to the rising and/or falling clock edge(s) of sys_clock.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on usb_uart_txd relative to the rising and/or falling clock edge(s) of sys_clock.
+Related violations: <none>
+
+

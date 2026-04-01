@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1772767548" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/soc_rtos_ver1_wrapper.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="soc_rtos_can_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="soc_rtos_can_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="soc_rtos_can_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="soc_rtos_can_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="soc_rtos_can_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="soc_rtos_can_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="soc_rtos_can_wrapper_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="soc_rtos_can_wrapper_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="soc_rtos_can_wrapper.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/soc_rtos_can/soc_rtos_can.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_rtos_can/hdl/soc_rtos_can_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/soc_rtos_ver1/soc_rtos_ver1.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/soc_rtos_ver1/hdl/soc_rtos_ver1_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ip_repo/myip_RTOS_1_0/hdl/tick_timebase.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_RTOS_1_0/hdl/tick_timebase.v"/>
+        <Attr Name="ImportTime" Val="1770104977"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/myip_RTOS_slave_lite_v1_0_S00_AXI.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_RTOS_1_0/hdl/myip_RTOS_slave_lite_v1_0_S00_AXI.v"/>
+        <Attr Name="ImportTime" Val="1770248738"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/tick_timebase.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_RTOS_1_0/hdl/tick_timebase.v"/>
+        <Attr Name="ImportTime" Val="1770175671"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ip_repo/myip_irq_cntr_1_0/hdl/irq_cntr.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/myip_irq_cntr_1_0/hdl/irq_cntr.v"/>
+        <Attr Name="ImportTime" Val="1770185343"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/can_bit_timing.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="soc_rtos_can_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Downloads/Basys-3-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Downloads/Basys-3-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1764743937"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/soc_rtos_ver1_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_myip_RTOS_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_microblaze_riscv_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_microblaze_riscv_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_can_myip_can_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="soc_rtos_ver1_microblaze_riscv_0_axi_intc_0"/>
+</GenRun>

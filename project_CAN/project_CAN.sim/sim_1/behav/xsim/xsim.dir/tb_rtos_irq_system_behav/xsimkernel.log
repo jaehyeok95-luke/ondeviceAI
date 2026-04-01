@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_rtos_irq_system_behav/xsimk -simmode gui -wdb tb_rtos_irq_system_behav.wdb -simrunnum 0 -socket 36265
+Design successfully loaded
+Design Loading Memory Usage: 181668 KB (Peak: 181724 KB)
+Design Loading CPU Usage: 640 ms
+Simulation completed
+Simulation Memory Usage: 263664 KB (Peak: 320936 KB)
+Simulation CPU Usage: 650 ms

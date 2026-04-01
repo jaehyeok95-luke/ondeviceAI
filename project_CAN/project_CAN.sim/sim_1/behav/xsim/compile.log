@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user14/project_CAN/project_CAN.srcs/sources_1/imports/ip_repo/myip_irq_cntr_1_0/hdl/irq_cntr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module irq_cntr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user14/project_CAN/project_CAN.srcs/sources_1/imports/hdl/myip_RTOS_slave_lite_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_RTOS_slave_lite_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user14/project_CAN/project_CAN.srcs/sources_1/imports/ip_repo/myip_irq_cntr_1_0/hdl/myip_irq_cntr_slave_lite_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_irq_cntr_slave_lite_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user14/project_CAN/project_CAN.srcs/sources_1/imports/ip_repo/myip_RTOS_1_0/hdl/tick_timebase.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tick_timebase
+INFO: [VRFC 10-311] analyzing module tick_counter
+INFO: [VRFC 10-311] analyzing module irq_latch
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user14/project_CAN/project_CAN.srcs/sim_1/new/tb_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_axi_rtos_irqc_system

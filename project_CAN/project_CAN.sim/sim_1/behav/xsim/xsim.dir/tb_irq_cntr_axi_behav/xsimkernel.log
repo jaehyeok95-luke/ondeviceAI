@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_irq_cntr_axi_behav/xsimk -simmode gui -wdb tb_irq_cntr_axi_behav.wdb -simrunnum 0 -socket 46425
+Design successfully loaded
+Design Loading Memory Usage: 181680 KB (Peak: 181736 KB)
+Design Loading CPU Usage: 640 ms
+Simulation completed
+Simulation Memory Usage: 263676 KB (Peak: 320948 KB)
+Simulation CPU Usage: 640 ms

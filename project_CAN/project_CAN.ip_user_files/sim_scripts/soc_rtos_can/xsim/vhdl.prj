@@ -1,0 +1,70 @@
+vhdl lib_cdc_v1_0_3  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd" \
+
+vhdl proc_sys_reset_v5_0_16  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_proc_sys_reset_0_0/sim/soc_rtos_can_proc_sys_reset_0_0.vhd" \
+
+vhdl microblaze_v11_0_14  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/a243/hdl/microblaze_v11_0_vh_rfs.vhd" \
+
+vhdl microblaze_riscv_v1_0_3  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/f9dd/hdl/microblaze_riscv_v1_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_microblaze_riscv_0_0/sim/soc_rtos_can_microblaze_riscv_0_0.vhd" \
+
+vhdl lmb_v10_v3_0_14  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/7495/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_dlmb_v10_0/sim/soc_rtos_can_dlmb_v10_0.vhd" \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_ilmb_v10_0/sim/soc_rtos_can_ilmb_v10_0.vhd" \
+
+vhdl lmb_bram_if_cntlr_v4_0_25  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/73e9/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_dlmb_bram_if_cntlr_0/sim/soc_rtos_can_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_ilmb_bram_if_cntlr_0/sim/soc_rtos_can_ilmb_bram_if_cntlr_0.vhd" \
+
+vhdl fifo_generator_v13_2_11  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/6080/hdl/fifo_generator_v13_2_rfs.vhd" \
+
+vhdl axi_lite_ipif_v3_0_4  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+
+vhdl axi_intc_v4_1_20  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/99b7/hdl/axi_intc_v4_1_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_microblaze_riscv_0_axi_intc_0/sim/soc_rtos_can_microblaze_riscv_0_axi_intc_0.vhd" \
+
+vhdl mdm_riscv_v1_0_3  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/d547/hdl/mdm_riscv_v1_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_mdm_1_0/sim/soc_rtos_can_mdm_1_0.vhd" \
+
+vhdl lib_pkg_v1_0_4  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/8c68/hdl/lib_pkg_v1_0_rfs.vhd" \
+
+vhdl lib_srl_fifo_v1_0_4  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/1e5a/hdl/lib_srl_fifo_v1_0_rfs.vhd" \
+
+vhdl axi_uartlite_v2_0_37  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/9a87/hdl/axi_uartlite_v2_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_axi_uartlite_0_0/sim/soc_rtos_can_axi_uartlite_0_0.vhd" \
+
+vhdl axi_timer_v2_0_35  \
+"../../../../project_CAN.gen/sources_1/bd/soc_rtos_can/ipshared/906c/hdl/axi_timer_v2_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/soc_rtos_can/ip/soc_rtos_can_axi_timer_0_1/sim/soc_rtos_can_axi_timer_0_1.vhd" \
+
+# Do not sort compile order
+nosort
